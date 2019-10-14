@@ -1,0 +1,1038 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Documents operations</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for DocumentsApi {factset.analyticsapi.engines.v2}"><tr><td>DocumentsApi {factset.analyticsapi.engines.v2}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Documents operations</h2>
+
+<h3>Description</h3>
+
+<p>factset.analyticsapi.engines.v2.Documents
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+DocumentsApi
+</pre>
+
+
+<h3>Format</h3>
+
+<p>An <code>R6Class</code> generator object</p>
+
+
+<h3>Fields</h3>
+
+
+<dl>
+<dt><code>apiClient</code></dt><dd><p>Handles the client-server communication.</p>
+</dd>
+</dl>
+
+
+<h3>Methods</h3>
+
+
+<p><strong> GetPA3Documents </strong> <em> Get PA3 documents and sub-directories in a directory </em>
+This endpoint looks up all PA3 documents and sub-directories in a given directory.
+</p>
+
+<ul>
+<li> <p><em> @param </em> path character
+</p>
+</li>
+<li> <p><em> @returnType </em> <a href="DocumentDirectories.html"> DocumentDirectories </a>   <br />
+</p>
+</li>
+<li><p> On encountering errors, an error of subclass ApiException will be thrown.
+</p>
+</li>
+<li><p> status code : 200 | Expected response, returns a list of PA3 documents and directories
+</p>
+</li>
+<li><p> return type : DocumentDirectories 
+</p>
+</li>
+<li><p> response headers :
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Remaining </td><td style="text-align: left;"> Number of requests left for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-FactSet-Api-Request-Key </td><td style="text-align: left;"> Key to uniquely identify an Analytics API request. Only available after successful authentication. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Reset </td><td style="text-align: left;"> Number of seconds remaining till rate limit resets. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Limit </td><td style="text-align: left;"> Number of allowed requests for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-DataDirect-Request-Key </td><td style="text-align: left;"> FactSet&amp;#39;s request key header. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+</td>
+</tr>
+
+</table>
+
+</li>
+<li><p> status code : 400 | Invalid query parameter or value provided
+</p>
+</li>
+<li><p> response headers :
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Remaining </td><td style="text-align: left;"> Number of requests left for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-FactSet-Api-Request-Key </td><td style="text-align: left;"> Key to uniquely identify an Analytics API request. Only available after successful authentication. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Reset </td><td style="text-align: left;"> Number of seconds remaining till rate limit resets. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Limit </td><td style="text-align: left;"> Number of allowed requests for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-DataDirect-Request-Key </td><td style="text-align: left;"> FactSet&amp;#39;s request key header. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+</td>
+</tr>
+
+</table>
+
+</li>
+<li><p> status code : 401 | Missing or invalid authentication
+</p>
+</li>
+<li><p> response headers :
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Remaining </td><td style="text-align: left;"> Number of requests left for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-FactSet-Api-Request-Key </td><td style="text-align: left;"> Key to uniquely identify an Analytics API request. Only available after successful authentication. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Reset </td><td style="text-align: left;"> Number of seconds remaining till rate limit resets. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Limit </td><td style="text-align: left;"> Number of allowed requests for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-DataDirect-Request-Key </td><td style="text-align: left;"> FactSet&amp;#39;s request key header. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+</td>
+</tr>
+
+</table>
+
+</li>
+<li><p> status code : 403 | User is forbidden with current credentials
+</p>
+</li>
+<li><p> response headers :
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Remaining </td><td style="text-align: left;"> Number of requests left for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-FactSet-Api-Request-Key </td><td style="text-align: left;"> Key to uniquely identify an Analytics API request. Only available after successful authentication. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Reset </td><td style="text-align: left;"> Number of seconds remaining till rate limit resets. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Limit </td><td style="text-align: left;"> Number of allowed requests for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-DataDirect-Request-Key </td><td style="text-align: left;"> FactSet&amp;#39;s request key header. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+</td>
+</tr>
+
+</table>
+
+</li>
+<li><p> status code : 404 | Path not found
+</p>
+</li>
+<li><p> response headers :
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Remaining </td><td style="text-align: left;"> Number of requests left for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-FactSet-Api-Request-Key </td><td style="text-align: left;"> Key to uniquely identify an Analytics API request. Only available after successful authentication. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Reset </td><td style="text-align: left;"> Number of seconds remaining till rate limit resets. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Limit </td><td style="text-align: left;"> Number of allowed requests for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-DataDirect-Request-Key </td><td style="text-align: left;"> FactSet&amp;#39;s request key header. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+</td>
+</tr>
+
+</table>
+
+</li>
+<li><p> status code : 406 | Unsupported Accept header.  Header needs to be set to application/json
+</p>
+</li>
+<li><p> response headers :
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Remaining </td><td style="text-align: left;"> Number of requests left for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-FactSet-Api-Request-Key </td><td style="text-align: left;"> Key to uniquely identify an Analytics API request. Only available after successful authentication. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Reset </td><td style="text-align: left;"> Number of seconds remaining till rate limit resets. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Limit </td><td style="text-align: left;"> Number of allowed requests for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-DataDirect-Request-Key </td><td style="text-align: left;"> FactSet&amp;#39;s request key header. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+</td>
+</tr>
+
+</table>
+
+</li>
+<li><p> status code : 500 | Server error. Log the X-DataDirect-Request-Key header to assist in troubleshooting
+</p>
+</li>
+<li><p> response headers :
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Remaining </td><td style="text-align: left;"> Number of requests left for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-FactSet-Api-Request-Key </td><td style="text-align: left;"> Key to uniquely identify an Analytics API request. Only available after successful authentication. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Reset </td><td style="text-align: left;"> Number of seconds remaining till rate limit resets. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Limit </td><td style="text-align: left;"> Number of allowed requests for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-DataDirect-Request-Key </td><td style="text-align: left;"> FactSet&amp;#39;s request key header. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+</td>
+</tr>
+
+</table>
+
+</li>
+<li><p> status code : 503 | Request timed out. Retry the request in some time
+</p>
+</li>
+<li><p> response headers :
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Remaining </td><td style="text-align: left;"> Number of requests left for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-FactSet-Api-Request-Key </td><td style="text-align: left;"> Key to uniquely identify an Analytics API request. Only available after successful authentication. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Reset </td><td style="text-align: left;"> Number of seconds remaining till rate limit resets. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Limit </td><td style="text-align: left;"> Number of allowed requests for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-DataDirect-Request-Key </td><td style="text-align: left;"> FactSet&amp;#39;s request key header. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+</td>
+</tr>
+
+</table>
+
+</li></ul>
+
+<p><strong> GetSPAR3Documents </strong> <em> Gets SPAR3 documents and sub-directories in a directory </em>
+This endpoint looks up all SPAR3 documents and sub-directories in a given directory.
+</p>
+
+<ul>
+<li> <p><em> @param </em> path character
+</p>
+</li>
+<li> <p><em> @returnType </em> <a href="DocumentDirectories.html"> DocumentDirectories </a>   <br />
+</p>
+</li>
+<li><p> On encountering errors, an error of subclass ApiException will be thrown.
+</p>
+</li>
+<li><p> status code : 200 | Expected response, returns a list of SPAR3 documents and directories
+</p>
+</li>
+<li><p> return type : DocumentDirectories 
+</p>
+</li>
+<li><p> response headers :
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Remaining </td><td style="text-align: left;"> Number of requests left for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-FactSet-Api-Request-Key </td><td style="text-align: left;"> Key to uniquely identify an Analytics API request. Only available after successful authentication. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Reset </td><td style="text-align: left;"> Number of seconds remaining till rate limit resets. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Limit </td><td style="text-align: left;"> Number of allowed requests for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-DataDirect-Request-Key </td><td style="text-align: left;"> FactSet&amp;#39;s request key header. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+</td>
+</tr>
+
+</table>
+
+</li>
+<li><p> status code : 400 | Invalid query parameter or value provided
+</p>
+</li>
+<li><p> response headers :
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Remaining </td><td style="text-align: left;"> Number of requests left for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-FactSet-Api-Request-Key </td><td style="text-align: left;"> Key to uniquely identify an Analytics API request. Only available after successful authentication. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Reset </td><td style="text-align: left;"> Number of seconds remaining till rate limit resets. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Limit </td><td style="text-align: left;"> Number of allowed requests for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-DataDirect-Request-Key </td><td style="text-align: left;"> FactSet&amp;#39;s request key header. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+</td>
+</tr>
+
+</table>
+
+</li>
+<li><p> status code : 401 | Missing or invalid authentication
+</p>
+</li>
+<li><p> response headers :
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Remaining </td><td style="text-align: left;"> Number of requests left for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-FactSet-Api-Request-Key </td><td style="text-align: left;"> Key to uniquely identify an Analytics API request. Only available after successful authentication. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Reset </td><td style="text-align: left;"> Number of seconds remaining till rate limit resets. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Limit </td><td style="text-align: left;"> Number of allowed requests for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-DataDirect-Request-Key </td><td style="text-align: left;"> FactSet&amp;#39;s request key header. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+</td>
+</tr>
+
+</table>
+
+</li>
+<li><p> status code : 403 | User is forbidden with current credentials
+</p>
+</li>
+<li><p> response headers :
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Remaining </td><td style="text-align: left;"> Number of requests left for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-FactSet-Api-Request-Key </td><td style="text-align: left;"> Key to uniquely identify an Analytics API request. Only available after successful authentication. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Reset </td><td style="text-align: left;"> Number of seconds remaining till rate limit resets. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Limit </td><td style="text-align: left;"> Number of allowed requests for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-DataDirect-Request-Key </td><td style="text-align: left;"> FactSet&amp;#39;s request key header. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+</td>
+</tr>
+
+</table>
+
+</li>
+<li><p> status code : 404 | Path not found
+</p>
+</li>
+<li><p> response headers :
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Remaining </td><td style="text-align: left;"> Number of requests left for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-FactSet-Api-Request-Key </td><td style="text-align: left;"> Key to uniquely identify an Analytics API request. Only available after successful authentication. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Reset </td><td style="text-align: left;"> Number of seconds remaining till rate limit resets. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Limit </td><td style="text-align: left;"> Number of allowed requests for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-DataDirect-Request-Key </td><td style="text-align: left;"> FactSet&amp;#39;s request key header. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+</td>
+</tr>
+
+</table>
+
+</li>
+<li><p> status code : 406 | Unsupported Accept header.  Header needs to be set to application/json
+</p>
+</li>
+<li><p> response headers :
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Remaining </td><td style="text-align: left;"> Number of requests left for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-FactSet-Api-Request-Key </td><td style="text-align: left;"> Key to uniquely identify an Analytics API request. Only available after successful authentication. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Reset </td><td style="text-align: left;"> Number of seconds remaining till rate limit resets. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Limit </td><td style="text-align: left;"> Number of allowed requests for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-DataDirect-Request-Key </td><td style="text-align: left;"> FactSet&amp;#39;s request key header. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+</td>
+</tr>
+
+</table>
+
+</li>
+<li><p> status code : 500 | Server error. Log the X-DataDirect-Request-Key header to assist in troubleshooting
+</p>
+</li>
+<li><p> response headers :
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Remaining </td><td style="text-align: left;"> Number of requests left for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-FactSet-Api-Request-Key </td><td style="text-align: left;"> Key to uniquely identify an Analytics API request. Only available after successful authentication. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Reset </td><td style="text-align: left;"> Number of seconds remaining till rate limit resets. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Limit </td><td style="text-align: left;"> Number of allowed requests for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-DataDirect-Request-Key </td><td style="text-align: left;"> FactSet&amp;#39;s request key header. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+</td>
+</tr>
+
+</table>
+
+</li>
+<li><p> status code : 503 | Request timed out. Retry the request in some time
+</p>
+</li>
+<li><p> response headers :
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Remaining </td><td style="text-align: left;"> Number of requests left for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-FactSet-Api-Request-Key </td><td style="text-align: left;"> Key to uniquely identify an Analytics API request. Only available after successful authentication. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Reset </td><td style="text-align: left;"> Number of seconds remaining till rate limit resets. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Limit </td><td style="text-align: left;"> Number of allowed requests for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-DataDirect-Request-Key </td><td style="text-align: left;"> FactSet&amp;#39;s request key header. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+</td>
+</tr>
+
+</table>
+
+</li></ul>
+
+<p><strong> GetVaultDocuments </strong> <em> Get Vault documents and sub-directories in a directory </em>
+This endpoint looks up all Vault documents and sub-directories in a given directory.
+</p>
+
+<ul>
+<li> <p><em> @param </em> path character
+</p>
+</li>
+<li> <p><em> @returnType </em> <a href="DocumentDirectories.html"> DocumentDirectories </a>   <br />
+</p>
+</li>
+<li><p> On encountering errors, an error of subclass ApiException will be thrown.
+</p>
+</li>
+<li><p> status code : 200 | Expected response, returns a list of Vault documents and directories
+</p>
+</li>
+<li><p> return type : DocumentDirectories 
+</p>
+</li>
+<li><p> response headers :
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Remaining </td><td style="text-align: left;"> Number of requests left for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-FactSet-Api-Request-Key </td><td style="text-align: left;"> Key to uniquely identify an Analytics API request. Only available after successful authentication. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Reset </td><td style="text-align: left;"> Number of seconds remaining till rate limit resets. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Limit </td><td style="text-align: left;"> Number of allowed requests for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-DataDirect-Request-Key </td><td style="text-align: left;"> FactSet&amp;#39;s request key header. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+</td>
+</tr>
+
+</table>
+
+</li>
+<li><p> status code : 400 | Invalid query parameter or value provided
+</p>
+</li>
+<li><p> response headers :
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Remaining </td><td style="text-align: left;"> Number of requests left for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-FactSet-Api-Request-Key </td><td style="text-align: left;"> Key to uniquely identify an Analytics API request. Only available after successful authentication. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Reset </td><td style="text-align: left;"> Number of seconds remaining till rate limit resets. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Limit </td><td style="text-align: left;"> Number of allowed requests for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-DataDirect-Request-Key </td><td style="text-align: left;"> FactSet&amp;#39;s request key header. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+</td>
+</tr>
+
+</table>
+
+</li>
+<li><p> status code : 401 | Missing or invalid authentication
+</p>
+</li>
+<li><p> response headers :
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Remaining </td><td style="text-align: left;"> Number of requests left for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-FactSet-Api-Request-Key </td><td style="text-align: left;"> Key to uniquely identify an Analytics API request. Only available after successful authentication. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Reset </td><td style="text-align: left;"> Number of seconds remaining till rate limit resets. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Limit </td><td style="text-align: left;"> Number of allowed requests for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-DataDirect-Request-Key </td><td style="text-align: left;"> FactSet&amp;#39;s request key header. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+</td>
+</tr>
+
+</table>
+
+</li>
+<li><p> status code : 403 | User is forbidden with current credentials
+</p>
+</li>
+<li><p> response headers :
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Remaining </td><td style="text-align: left;"> Number of requests left for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-FactSet-Api-Request-Key </td><td style="text-align: left;"> Key to uniquely identify an Analytics API request. Only available after successful authentication. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Reset </td><td style="text-align: left;"> Number of seconds remaining till rate limit resets. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Limit </td><td style="text-align: left;"> Number of allowed requests for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-DataDirect-Request-Key </td><td style="text-align: left;"> FactSet&amp;#39;s request key header. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+</td>
+</tr>
+
+</table>
+
+</li>
+<li><p> status code : 404 | Path not found
+</p>
+</li>
+<li><p> response headers :
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Remaining </td><td style="text-align: left;"> Number of requests left for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-FactSet-Api-Request-Key </td><td style="text-align: left;"> Key to uniquely identify an Analytics API request. Only available after successful authentication. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Reset </td><td style="text-align: left;"> Number of seconds remaining till rate limit resets. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Limit </td><td style="text-align: left;"> Number of allowed requests for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-DataDirect-Request-Key </td><td style="text-align: left;"> FactSet&amp;#39;s request key header. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+</td>
+</tr>
+
+</table>
+
+</li>
+<li><p> status code : 406 | Unsupported Accept header.  Header needs to be set to application/json
+</p>
+</li>
+<li><p> response headers :
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Remaining </td><td style="text-align: left;"> Number of requests left for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-FactSet-Api-Request-Key </td><td style="text-align: left;"> Key to uniquely identify an Analytics API request. Only available after successful authentication. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Reset </td><td style="text-align: left;"> Number of seconds remaining till rate limit resets. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Limit </td><td style="text-align: left;"> Number of allowed requests for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-DataDirect-Request-Key </td><td style="text-align: left;"> FactSet&amp;#39;s request key header. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+</td>
+</tr>
+
+</table>
+
+</li>
+<li><p> status code : 500 | Server error. Log the X-DataDirect-Request-Key header to assist in troubleshooting
+</p>
+</li>
+<li><p> response headers :
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Remaining </td><td style="text-align: left;"> Number of requests left for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-FactSet-Api-Request-Key </td><td style="text-align: left;"> Key to uniquely identify an Analytics API request. Only available after successful authentication. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Reset </td><td style="text-align: left;"> Number of seconds remaining till rate limit resets. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Limit </td><td style="text-align: left;"> Number of allowed requests for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-DataDirect-Request-Key </td><td style="text-align: left;"> FactSet&amp;#39;s request key header. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+</td>
+</tr>
+
+</table>
+
+</li>
+<li><p> status code : 503 | Request timed out. Retry the request in some time
+</p>
+</li>
+<li><p> response headers :
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Remaining </td><td style="text-align: left;"> Number of requests left for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-FactSet-Api-Request-Key </td><td style="text-align: left;"> Key to uniquely identify an Analytics API request. Only available after successful authentication. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Reset </td><td style="text-align: left;"> Number of seconds remaining till rate limit resets. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-RateLimit-Limit </td><td style="text-align: left;"> Number of allowed requests for the time window. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+X-DataDirect-Request-Key </td><td style="text-align: left;"> FactSet&amp;#39;s request key header. </td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+</td>
+</tr>
+
+</table>
+
+</li></ul>
+
+
+
+
+<h3>Examples</h3>
+
+<pre>
+
+####################  GetPA3Documents  ####################
+
+library(factset.analyticsapi.engines.v2)
+var.path &lt;- 'path_example' # character | The directory to get the documents and sub-directories in
+
+#Get PA3 documents and sub-directories in a directory
+api.instance &lt;- DocumentsApi$new()
+
+#Configure HTTP basic authorization: Basic
+# provide your username in the user-serial format
+api.instance$apiClient$username &lt;- '&lt;user-serial&gt;'; 
+# provide your api key generated using the developer portal
+api.instance$apiClient$password &lt;- '&lt;api_key&gt;';
+
+result &lt;- tryCatch(
+            api.instance$GetPA3Documents(var.path),
+            ApiException = function(ex) ex 
+         )
+# In case of error, print the error object 
+if(!is.null(result$ApiException)) {
+  cat(result$ApiException$toString())
+} else {
+# deserialized response object
+response.object &lt;- result$content
+# response headers
+response.headers &lt;- result$response$headers
+# response status code
+response.status.code &lt;- result$response$status_code
+}
+
+
+####################  GetSPAR3Documents  ####################
+
+library(factset.analyticsapi.engines.v2)
+var.path &lt;- 'path_example' # character | The directory to get the documents in
+
+#Gets SPAR3 documents and sub-directories in a directory
+api.instance &lt;- DocumentsApi$new()
+
+#Configure HTTP basic authorization: Basic
+# provide your username in the user-serial format
+api.instance$apiClient$username &lt;- '&lt;user-serial&gt;'; 
+# provide your api key generated using the developer portal
+api.instance$apiClient$password &lt;- '&lt;api_key&gt;';
+
+result &lt;- tryCatch(
+            api.instance$GetSPAR3Documents(var.path),
+            ApiException = function(ex) ex 
+         )
+# In case of error, print the error object 
+if(!is.null(result$ApiException)) {
+  cat(result$ApiException$toString())
+} else {
+# deserialized response object
+response.object &lt;- result$content
+# response headers
+response.headers &lt;- result$response$headers
+# response status code
+response.status.code &lt;- result$response$status_code
+}
+
+
+####################  GetVaultDocuments  ####################
+
+library(factset.analyticsapi.engines.v2)
+var.path &lt;- 'path_example' # character | The directory to get the documents in
+
+#Get Vault documents and sub-directories in a directory
+api.instance &lt;- DocumentsApi$new()
+
+#Configure HTTP basic authorization: Basic
+# provide your username in the user-serial format
+api.instance$apiClient$username &lt;- '&lt;user-serial&gt;'; 
+# provide your api key generated using the developer portal
+api.instance$apiClient$password &lt;- '&lt;api_key&gt;';
+
+result &lt;- tryCatch(
+            api.instance$GetVaultDocuments(var.path),
+            ApiException = function(ex) ex 
+         )
+# In case of error, print the error object 
+if(!is.null(result$ApiException)) {
+  cat(result$ApiException$toString())
+} else {
+# deserialized response object
+response.object &lt;- result$content
+# response headers
+response.headers &lt;- result$response$headers
+# response status code
+response.status.code &lt;- result$response$status_code
+}
+
+
+
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>factset.analyticsapi.engines.v2</em> version 2.0.0 <a href="00Index.html">Index</a>]</div>
+</body></html>
