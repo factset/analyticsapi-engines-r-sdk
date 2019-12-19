@@ -1,7 +1,0 @@
-{
-	"packageName": "factset.analyticsapi.engines.v2",
-	"packageVersion": "2.0.0",
-	"hideGenerationTimestamp": "true",
-	"returnExceptionOnFailure": "true",
-	"exceptionPackage": "rlang"
-}

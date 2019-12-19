@@ -1,0 +1,10 @@
+{
+	"packageName": "factset.analyticsapi.engines",
+	"packageVersion": "3.0.0",
+	"hideGenerationTimestamp": "true",
+	"returnExceptionOnFailure": "true",
+	"exceptionPackage": "rlang",
+	"gitHost": "github.com",
+	"gitUserId": "factset",
+	"gitRepoId": "analyticsapi-engines-r-sdk"
+}

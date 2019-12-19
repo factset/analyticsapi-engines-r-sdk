@@ -1,4 +1,26 @@
+3.0.0 (12/02/2019)
+
+Supported API versions:
+* v2
+
+Summary:
+* Making SDK independent of the API version.
+
+Breaking changes:
+* API version is removed from the namespace of all classes.
+
+Functionality Additions:
+* No changes.
+
+Bug Fixes:
+* No changes.
+
+-----------------------
+
 v2-2.0.0 (09/26/2019)
+
+Supported API versions:
+* v2
 
 Summary:
 * Update class and property names.
@@ -59,6 +81,9 @@ Bug Fixes:
 -----------------------
 
 v2-1.0.0 (08/30/2019)
+
+Supported API versions:
+* v2
  
 Summary:
 * Releasing first version of Engines API(v2).
