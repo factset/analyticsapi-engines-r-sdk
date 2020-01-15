@@ -264,7 +264,8 @@ response.status.code <- result$response$status_code
 ####################  GetVaultConfigurations  ####################
 
 library(factset.analyticsapi.engines)
-var.account <- 'account_example' # character | Required account query parameter to filter configurations for a specific account
+var.account <- 'account_example' # character | Required account query parameter to 
+                                 # filter configurations for a specific account
 
 #Get Vault configurations
 api.instance <- ConfigurationsApi$new()

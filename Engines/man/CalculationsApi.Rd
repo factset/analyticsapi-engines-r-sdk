@@ -440,7 +440,8 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 ####################  CancelCalculationById  ####################
 
 library(factset.analyticsapi.engines)
-var.id <- 'id_example' # character | From url, provided from the location header in the Run Multiple Calculations endpoint.
+var.id <- 'id_example' # character | From url, provided from the location 
+                       # header in the Run Multiple Calculations endpoint.
 
 #Cancel calculation by id
 api.instance <- CalculationsApi$new()
@@ -469,7 +470,8 @@ response.status.code <- result$response$status_code
 ####################  GetCalculationStatusById  ####################
 
 library(factset.analyticsapi.engines)
-var.id <- 'id_example' # character | From url, provided from the location header in the Run Multiple Calculations endpoint.
+var.id <- 'id_example' # character | From url, provided from the location 
+                       # header in the Run Multiple Calculations endpoint.
 
 #Get calculation status by id
 api.instance <- CalculationsApi$new()

@@ -254,7 +254,8 @@ api.instance$apiClient$username <- '<user-serial>';
 api.instance$apiClient$password <- '<api_key>';
 
 result <- tryCatch(
-            api.instance$ConvertPADatesToAbsoluteFormat(var.enddate, var.componentid, var.account, startdate=var.startdate),
+            api.instance$ConvertPADatesToAbsoluteFormat(var.enddate, var.componentid, 
+                                                        var.account, startdate=var.startdate),
             ApiException = function(ex) ex 
          )
 # In case of error, print the error object 
@@ -288,7 +289,8 @@ api.instance$apiClient$username <- '<user-serial>';
 api.instance$apiClient$password <- '<api_key>';
 
 result <- tryCatch(
-            api.instance$ConvertVaultDatesToAbsoluteFormat(var.enddate, var.componentid, var.account, startdate=var.startdate),
+            api.instance$ConvertVaultDatesToAbsoluteFormat(var.enddate, var.componentid, 
+                                                           var.account, startdate=var.startdate),
             ApiException = function(ex) ex 
          )
 # In case of error, print the error object 

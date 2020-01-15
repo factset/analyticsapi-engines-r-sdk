@@ -258,7 +258,8 @@ api.instance$apiClient$username <- '<user-serial>';
 api.instance$apiClient$password <- '<api_key>';
 
 result <- tryCatch(
-            api.instance$GetPAColumns(name=var.name, category=var.category, directory=var.directory),
+            api.instance$GetPAColumns(name=var.name, category=var.category, 
+                                      directory=var.directory),
             ApiException = function(ex) ex 
          )
 # In case of error, print the error object 
