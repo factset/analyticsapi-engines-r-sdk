@@ -209,7 +209,7 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 }
 
 \examples{
-\donttest{
+\dontrun{
 ####################  GetPAColumnById  ####################
 
 library(factset.analyticsapi.engines)

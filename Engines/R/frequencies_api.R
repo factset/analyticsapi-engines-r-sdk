@@ -264,7 +264,7 @@
 #'
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' ####################  GetPAFrequencies  ####################
 #'
 #' library(factset.analyticsapi.engines)

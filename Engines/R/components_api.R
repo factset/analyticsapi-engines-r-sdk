@@ -553,7 +553,7 @@
 #'
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' ####################  GetPAComponentById  ####################
 #'
 #' library(factset.analyticsapi.engines)

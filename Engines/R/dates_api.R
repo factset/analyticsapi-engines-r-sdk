@@ -238,7 +238,7 @@
 #'
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' ####################  ConvertPADatesToAbsoluteFormat  ####################
 #'
 #' library(factset.analyticsapi.engines)

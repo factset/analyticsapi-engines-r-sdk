@@ -101,7 +101,7 @@
 #'
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' ####################  GetPAGroups  ####################
 #'
 #' library(factset.analyticsapi.engines)

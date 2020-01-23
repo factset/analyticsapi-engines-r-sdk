@@ -339,7 +339,7 @@
 #'
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' ####################  GetPA3Documents  ####################
 #'
 #' library(factset.analyticsapi.engines)

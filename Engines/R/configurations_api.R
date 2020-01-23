@@ -232,7 +232,7 @@
 #'
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' ####################  GetVaultConfigurationById  ####################
 #'
 #' library(factset.analyticsapi.engines)

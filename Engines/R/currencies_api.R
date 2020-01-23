@@ -100,7 +100,7 @@
 #'
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' ####################  GetPACurrencies  ####################
 #'
 #' library(factset.analyticsapi.engines)

@@ -439,7 +439,7 @@
 #'
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' ####################  CancelCalculationById  ####################
 #'
 #' library(factset.analyticsapi.engines)

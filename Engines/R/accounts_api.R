@@ -125,7 +125,7 @@
 #'
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' ####################  GetAccounts  ####################
 #'
 #' library(factset.analyticsapi.engines)

@@ -336,7 +336,7 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 }
 
 \examples{
-\donttest{
+\dontrun{
 ####################  GetPA3Documents  ####################
 
 library(factset.analyticsapi.engines)

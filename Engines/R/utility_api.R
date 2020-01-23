@@ -92,7 +92,7 @@
 #'
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' ####################  GetByUrl  ####################
 #'
 #' library(factset.analyticsapi.engines)

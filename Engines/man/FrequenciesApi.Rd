@@ -261,7 +261,7 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 }
 
 \examples{
-\donttest{
+\dontrun{
 ####################  GetPAFrequencies  ####################
 
 library(factset.analyticsapi.engines)

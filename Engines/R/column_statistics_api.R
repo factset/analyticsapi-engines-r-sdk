@@ -100,7 +100,7 @@
 #'
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' ####################  GetPAColumnStatistics  ####################
 #'
 #' library(factset.analyticsapi.engines)

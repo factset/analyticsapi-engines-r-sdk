@@ -97,7 +97,7 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 }
 
 \examples{
-\donttest{
+\dontrun{
 ####################  GetPACurrencies  ####################
 
 library(factset.analyticsapi.engines)

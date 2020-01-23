@@ -212,7 +212,7 @@
 #'
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' ####################  GetPAColumnById  ####################
 #'
 #' library(factset.analyticsapi.engines)

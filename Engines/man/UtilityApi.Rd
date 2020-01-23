@@ -89,7 +89,7 @@ X-DataDirect-Request-Key \tab FactSet’s request key header. \cr
 }
 
 \examples{
-\donttest{
+\dontrun{
 ####################  GetByUrl  ####################
 
 library(factset.analyticsapi.engines)
