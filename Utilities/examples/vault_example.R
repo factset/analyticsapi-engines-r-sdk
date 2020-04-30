@@ -11,7 +11,7 @@ url <- "https://api.factset.com"
 vault_document <- "PA_DOCUMENTS:DEFAULT"
 vault_account <- VaultIdentifier$new(id = "Client:/analytics/data/US_MID_CAP_CORE.ACTM")
 vault_dates = VaultDateParameters$new(startdate = "FIRST_REPOSITORY", enddate = "LAST_REPOSITORY", frequency = "Monthly")
-vault_component_name = "Exposures"
+vault_component_name = "Weights"
 vault_component_category = "General / Positioning"
 
 apiClient <- ApiClient$new(basePath = url, username = username, password = password)

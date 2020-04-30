@@ -13,7 +13,7 @@ spar_account1 <- SPARIdentifier$new(id = "R.1000", returntype = "GTR", prefix = 
 spar_account2 <- SPARIdentifier$new(id = "R.2000", returntype = "GTR", prefix = "RUSSELL")
 spar_benchmark <- SPARIdentifier$new(id = "R.2000", returntype = "GTR", prefix = "RUSSELL")
 spar_dates <- SPARDateParameters$new(startdate = "20180101", enddate = "20181231", frequency = "Monthly")
-spar_component_name = "Returns Data"
+spar_component_name = "Returns Table"
 spar_component_category = "Raw Data / Returns"
 
 apiClient <- ApiClient$new(basePath = url, username = username, password = password)

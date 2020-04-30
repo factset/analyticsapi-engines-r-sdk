@@ -21,13 +21,13 @@ spar_account1 <- SPARIdentifier$new(id = "R.1000", returntype = "GTR", prefix = 
 spar_account2 <- SPARIdentifier$new(id = "R.2000", returntype = "GTR", prefix = "RUSSELL")
 spar_benchmark <- SPARIdentifier$new(id = "R.2000", returntype = "GTR", prefix = "RUSSELL")
 spar_dates <- SPARDateParameters$new(startdate = "20180101", enddate = "20181231", frequency = "Monthly")
-spar_component_name = "Returns Data"
+spar_component_name = "Returns Table"
 spar_component_category = "Raw Data / Returns"
 
 vault_document <- "PA_DOCUMENTS:DEFAULT"
 vault_account <- VaultIdentifier$new(id = "Client:/analytics/data/US_MID_CAP_CORE.ACTM")
 vault_dates = VaultDateParameters$new(startdate = "20190830", enddate = "20190904", frequency = "Monthly")
-vault_component_name = "Exposures"
+vault_component_name = "Weights"
 vault_component_category = "General / Positioning"
 
 apiClient <- ApiClient$new(basePath = url, username = username, password = password)
