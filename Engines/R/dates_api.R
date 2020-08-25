@@ -309,7 +309,7 @@
 #'
 #' }
 #' @importFrom R6 R6Class
-#' @importFrom caTools base64encode
+#' @importFrom base64enc base64encode
 #' @importFrom rlang abort
 #' @export
 DatesApi <- R6::R6Class(
@@ -365,7 +365,7 @@ DatesApi <- R6::R6Class(
 
       urlPath <- "/analytics/lookups/v2/engines/pa/dates"
       # HTTP basic auth
-      headerParams['Authorization'] <- paste("Basic", caTools::base64encode(paste(self$apiClient$username, self$apiClient$password, sep=":")), sep=" ")
+      headerParams['Authorization'] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$apiClient$username, self$apiClient$password, sep=":"))))
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
                                  method = "GET",
@@ -443,7 +443,7 @@ DatesApi <- R6::R6Class(
 
       urlPath <- "/analytics/lookups/v2/engines/vault/dates"
       # HTTP basic auth
-      headerParams['Authorization'] <- paste("Basic", caTools::base64encode(paste(self$apiClient$username, self$apiClient$password, sep=":")), sep=" ")
+      headerParams['Authorization'] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$apiClient$username, self$apiClient$password, sep=":"))))
 
       resp <- self$apiClient$CallApi(url = paste0(self$apiClient$basePath, urlPath),
                                  method = "GET",

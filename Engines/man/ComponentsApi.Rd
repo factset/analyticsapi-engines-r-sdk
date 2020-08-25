@@ -4,7 +4,9 @@
 \name{ComponentsApi}
 \alias{ComponentsApi}
 \title{Components operations}
-\format{An \code{R6Class} generator object}
+\format{
+An \code{R6Class} generator object
+}
 \description{
 factset.analyticsapi.engines.Components
 }
@@ -734,6 +736,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
+\if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ComponentsApi$new(apiClient)}\if{html}{\out{</div>}}
@@ -742,6 +745,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetPAComponentById"></a>}}
+\if{latex}{\out{\hypertarget{method-GetPAComponentById}{}}}
 \subsection{Method \code{GetPAComponentById()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ComponentsApi$GetPAComponentById(id, ...)}\if{html}{\out{</div>}}
@@ -750,6 +754,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetPAComponentByIdWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-GetPAComponentByIdWithHttpInfo}{}}}
 \subsection{Method \code{GetPAComponentByIdWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ComponentsApi$GetPAComponentByIdWithHttpInfo(id, ...)}\if{html}{\out{</div>}}
@@ -758,6 +763,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetPAComponents"></a>}}
+\if{latex}{\out{\hypertarget{method-GetPAComponents}{}}}
 \subsection{Method \code{GetPAComponents()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ComponentsApi$GetPAComponents(document, ...)}\if{html}{\out{</div>}}
@@ -766,6 +772,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetPAComponentsWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-GetPAComponentsWithHttpInfo}{}}}
 \subsection{Method \code{GetPAComponentsWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ComponentsApi$GetPAComponentsWithHttpInfo(document, ...)}\if{html}{\out{</div>}}
@@ -774,6 +781,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetSPARComponents"></a>}}
+\if{latex}{\out{\hypertarget{method-GetSPARComponents}{}}}
 \subsection{Method \code{GetSPARComponents()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ComponentsApi$GetSPARComponents(document, ...)}\if{html}{\out{</div>}}
@@ -782,6 +790,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetSPARComponentsWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-GetSPARComponentsWithHttpInfo}{}}}
 \subsection{Method \code{GetSPARComponentsWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ComponentsApi$GetSPARComponentsWithHttpInfo(document, ...)}\if{html}{\out{</div>}}
@@ -790,6 +799,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetVaultComponentById"></a>}}
+\if{latex}{\out{\hypertarget{method-GetVaultComponentById}{}}}
 \subsection{Method \code{GetVaultComponentById()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ComponentsApi$GetVaultComponentById(id, ...)}\if{html}{\out{</div>}}
@@ -798,6 +808,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetVaultComponentByIdWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-GetVaultComponentByIdWithHttpInfo}{}}}
 \subsection{Method \code{GetVaultComponentByIdWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ComponentsApi$GetVaultComponentByIdWithHttpInfo(id, ...)}\if{html}{\out{</div>}}
@@ -806,6 +817,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetVaultComponents"></a>}}
+\if{latex}{\out{\hypertarget{method-GetVaultComponents}{}}}
 \subsection{Method \code{GetVaultComponents()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ComponentsApi$GetVaultComponents(document, ...)}\if{html}{\out{</div>}}
@@ -814,6 +826,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetVaultComponentsWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-GetVaultComponentsWithHttpInfo}{}}}
 \subsection{Method \code{GetVaultComponentsWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ComponentsApi$GetVaultComponentsWithHttpInfo(document, ...)}\if{html}{\out{</div>}}
@@ -822,6 +835,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

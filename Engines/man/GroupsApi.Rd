@@ -4,7 +4,9 @@
 \name{GroupsApi}
 \alias{GroupsApi}
 \title{Groups operations}
-\format{An \code{R6Class} generator object}
+\format{
+An \code{R6Class} generator object
+}
 \description{
 factset.analyticsapi.engines.Groups
 }
@@ -149,6 +151,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
+\if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{GroupsApi$new(apiClient)}\if{html}{\out{</div>}}
@@ -157,6 +160,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetPAGroups"></a>}}
+\if{latex}{\out{\hypertarget{method-GetPAGroups}{}}}
 \subsection{Method \code{GetPAGroups()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{GroupsApi$GetPAGroups(...)}\if{html}{\out{</div>}}
@@ -165,6 +169,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetPAGroupsWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-GetPAGroupsWithHttpInfo}{}}}
 \subsection{Method \code{GetPAGroupsWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{GroupsApi$GetPAGroupsWithHttpInfo(...)}\if{html}{\out{</div>}}
@@ -173,6 +178,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

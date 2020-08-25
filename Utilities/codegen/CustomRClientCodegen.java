@@ -11,5 +11,7 @@ public class CustomRClientCodegen extends RClientCodegen {
         supportingFiles.add(new SupportingFile("utility_api.mustache", "R", "utility_api.R"));
  
         supportingFiles.add(new SupportingFile("utility_api_doc.mustache", apiDocPath, "UtilityApi.md"));
+
+        supportingFiles.add(new SupportingFile("stach_extensions.mustache", "R", "stach_extensions.R"));
     }
 }

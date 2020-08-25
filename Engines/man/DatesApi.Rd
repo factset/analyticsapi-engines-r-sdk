@@ -4,7 +4,9 @@
 \name{DatesApi}
 \alias{DatesApi}
 \title{Dates operations}
-\format{An \code{R6Class} generator object}
+\format{
+An \code{R6Class} generator object
+}
 \description{
 factset.analyticsapi.engines.Dates
 }
@@ -254,8 +256,7 @@ api.instance$apiClient$username <- '<user-serial>';
 api.instance$apiClient$password <- '<api_key>';
 
 result <- tryCatch(
-            api.instance$ConvertPADatesToAbsoluteFormat(var.enddate, var.componentid, 
-                                                        var.account, startdate=var.startdate),
+            api.instance$ConvertPADatesToAbsoluteFormat(var.enddate, var.componentid, var.account, startdate=var.startdate),
             ApiException = function(ex) ex 
          )
 # In case of error, print the error object 
@@ -289,8 +290,7 @@ api.instance$apiClient$username <- '<user-serial>';
 api.instance$apiClient$password <- '<api_key>';
 
 result <- tryCatch(
-            api.instance$ConvertVaultDatesToAbsoluteFormat(var.enddate, var.componentid, 
-                                                           var.account, startdate=var.startdate),
+            api.instance$ConvertVaultDatesToAbsoluteFormat(var.enddate, var.componentid, var.account, startdate=var.startdate),
             ApiException = function(ex) ex 
          )
 # In case of error, print the error object 
@@ -328,6 +328,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
+\if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{DatesApi$new(apiClient)}\if{html}{\out{</div>}}
@@ -336,6 +337,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-ConvertPADatesToAbsoluteFormat"></a>}}
+\if{latex}{\out{\hypertarget{method-ConvertPADatesToAbsoluteFormat}{}}}
 \subsection{Method \code{ConvertPADatesToAbsoluteFormat()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{DatesApi$ConvertPADatesToAbsoluteFormat(
@@ -350,6 +352,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-ConvertPADatesToAbsoluteFormatWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-ConvertPADatesToAbsoluteFormatWithHttpInfo}{}}}
 \subsection{Method \code{ConvertPADatesToAbsoluteFormatWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{DatesApi$ConvertPADatesToAbsoluteFormatWithHttpInfo(
@@ -364,6 +367,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-ConvertVaultDatesToAbsoluteFormat"></a>}}
+\if{latex}{\out{\hypertarget{method-ConvertVaultDatesToAbsoluteFormat}{}}}
 \subsection{Method \code{ConvertVaultDatesToAbsoluteFormat()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{DatesApi$ConvertVaultDatesToAbsoluteFormat(
@@ -378,6 +382,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-ConvertVaultDatesToAbsoluteFormatWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-ConvertVaultDatesToAbsoluteFormatWithHttpInfo}{}}}
 \subsection{Method \code{ConvertVaultDatesToAbsoluteFormatWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{DatesApi$ConvertVaultDatesToAbsoluteFormatWithHttpInfo(
@@ -392,6 +397,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

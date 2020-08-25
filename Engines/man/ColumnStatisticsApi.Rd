@@ -4,7 +4,9 @@
 \name{ColumnStatisticsApi}
 \alias{ColumnStatisticsApi}
 \title{ColumnStatistics operations}
-\format{An \code{R6Class} generator object}
+\format{
+An \code{R6Class} generator object
+}
 \description{
 factset.analyticsapi.engines.ColumnStatistics
 }
@@ -148,6 +150,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
+\if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ColumnStatisticsApi$new(apiClient)}\if{html}{\out{</div>}}
@@ -156,6 +159,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetPAColumnStatistics"></a>}}
+\if{latex}{\out{\hypertarget{method-GetPAColumnStatistics}{}}}
 \subsection{Method \code{GetPAColumnStatistics()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ColumnStatisticsApi$GetPAColumnStatistics(...)}\if{html}{\out{</div>}}
@@ -164,6 +168,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetPAColumnStatisticsWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-GetPAColumnStatisticsWithHttpInfo}{}}}
 \subsection{Method \code{GetPAColumnStatisticsWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ColumnStatisticsApi$GetPAColumnStatisticsWithHttpInfo(...)}\if{html}{\out{</div>}}
@@ -172,6 +177,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

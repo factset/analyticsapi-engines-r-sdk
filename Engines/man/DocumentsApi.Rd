@@ -4,7 +4,9 @@
 \name{DocumentsApi}
 \alias{DocumentsApi}
 \title{Documents operations}
-\format{An \code{R6Class} generator object}
+\format{
+An \code{R6Class} generator object
+}
 \description{
 factset.analyticsapi.engines.Documents
 }
@@ -454,6 +456,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
+\if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{DocumentsApi$new(apiClient)}\if{html}{\out{</div>}}
@@ -462,6 +465,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetPA3Documents"></a>}}
+\if{latex}{\out{\hypertarget{method-GetPA3Documents}{}}}
 \subsection{Method \code{GetPA3Documents()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{DocumentsApi$GetPA3Documents(path, ...)}\if{html}{\out{</div>}}
@@ -470,6 +474,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetPA3DocumentsWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-GetPA3DocumentsWithHttpInfo}{}}}
 \subsection{Method \code{GetPA3DocumentsWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{DocumentsApi$GetPA3DocumentsWithHttpInfo(path, ...)}\if{html}{\out{</div>}}
@@ -478,6 +483,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetSPAR3Documents"></a>}}
+\if{latex}{\out{\hypertarget{method-GetSPAR3Documents}{}}}
 \subsection{Method \code{GetSPAR3Documents()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{DocumentsApi$GetSPAR3Documents(path, ...)}\if{html}{\out{</div>}}
@@ -486,6 +492,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetSPAR3DocumentsWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-GetSPAR3DocumentsWithHttpInfo}{}}}
 \subsection{Method \code{GetSPAR3DocumentsWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{DocumentsApi$GetSPAR3DocumentsWithHttpInfo(path, ...)}\if{html}{\out{</div>}}
@@ -494,6 +501,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetVaultDocuments"></a>}}
+\if{latex}{\out{\hypertarget{method-GetVaultDocuments}{}}}
 \subsection{Method \code{GetVaultDocuments()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{DocumentsApi$GetVaultDocuments(path, ...)}\if{html}{\out{</div>}}
@@ -502,6 +510,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetVaultDocumentsWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-GetVaultDocumentsWithHttpInfo}{}}}
 \subsection{Method \code{GetVaultDocumentsWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{DocumentsApi$GetVaultDocumentsWithHttpInfo(path, ...)}\if{html}{\out{</div>}}
@@ -510,6 +519,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

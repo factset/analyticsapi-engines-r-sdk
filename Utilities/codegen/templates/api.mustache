@@ -1,5 +1,4 @@
-{{! This file is picked from the v4.2.2 release of openapi-generator(https://github.com/OpenAPITools/openapi-generator/blob/v4.2.2/modules/openapi-generator/src/main/resources/r/api.mustache) }}
-{{! Changes made: 1) Using dontrun instead of donttest for example snippets. }}
+{{! This file is picked from the v4.3.1 release of openapi-generator(https://github.com/OpenAPITools/openapi-generator/blob/v4.3.1/modules/openapi-generator/src/main/resources/r/api.mustache) }}
 {{>partial_header}}
 {{#operations}}
 #' @docType class
@@ -143,7 +142,7 @@
 {{/operation}}
 #' }
 #' @importFrom R6 R6Class
-#' @importFrom caTools base64encode
+#' @importFrom base64enc base64encode
 {{#useRlangExceptionHandling}}
 #' @importFrom rlang abort
 {{/useRlangExceptionHandling}}
@@ -241,7 +240,7 @@
       {{#isBasic}}
       {{#isBasicBasic}}
       # HTTP basic auth
-      headerParams['Authorization'] <- paste("Basic", caTools::base64encode(paste(self$apiClient$username, self$apiClient$password, sep=":")), sep=" ")
+      headerParams['Authorization'] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$apiClient$username, self$apiClient$password, sep=":"))))
       {{/isBasicBasic}}
       {{/isBasic}}
       {{#isApiKey}}

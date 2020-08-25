@@ -4,7 +4,9 @@
 \name{CalculationsApi}
 \alias{CalculationsApi}
 \title{Calculations operations}
-\format{An \code{R6Class} generator object}
+\format{
+An \code{R6Class} generator object
+}
 \description{
 factset.analyticsapi.engines.Calculations
 }
@@ -440,8 +442,7 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 ####################  CancelCalculationById  ####################
 
 library(factset.analyticsapi.engines)
-var.id <- 'id_example' # character | From url, provided from the location 
-                       # header in the Run Multiple Calculations endpoint.
+var.id <- 'id_example' # character | From url, provided from the location header in the Run Multiple Calculations endpoint.
 
 #Cancel calculation by id
 api.instance <- CalculationsApi$new()
@@ -470,8 +471,7 @@ response.status.code <- result$response$status_code
 ####################  GetCalculationStatusById  ####################
 
 library(factset.analyticsapi.engines)
-var.id <- 'id_example' # character | From url, provided from the location 
-                       # header in the Run Multiple Calculations endpoint.
+var.id <- 'id_example' # character | From url, provided from the location header in the Run Multiple Calculations endpoint.
 
 #Get calculation status by id
 api.instance <- CalculationsApi$new()
@@ -584,6 +584,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
+\if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CalculationsApi$new(apiClient)}\if{html}{\out{</div>}}
@@ -592,6 +593,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-CancelCalculationById"></a>}}
+\if{latex}{\out{\hypertarget{method-CancelCalculationById}{}}}
 \subsection{Method \code{CancelCalculationById()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CalculationsApi$CancelCalculationById(id, ...)}\if{html}{\out{</div>}}
@@ -600,6 +602,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-CancelCalculationByIdWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-CancelCalculationByIdWithHttpInfo}{}}}
 \subsection{Method \code{CancelCalculationByIdWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CalculationsApi$CancelCalculationByIdWithHttpInfo(id, ...)}\if{html}{\out{</div>}}
@@ -608,6 +611,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetCalculationStatusById"></a>}}
+\if{latex}{\out{\hypertarget{method-GetCalculationStatusById}{}}}
 \subsection{Method \code{GetCalculationStatusById()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CalculationsApi$GetCalculationStatusById(id, ...)}\if{html}{\out{</div>}}
@@ -616,6 +620,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetCalculationStatusByIdWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-GetCalculationStatusByIdWithHttpInfo}{}}}
 \subsection{Method \code{GetCalculationStatusByIdWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CalculationsApi$GetCalculationStatusByIdWithHttpInfo(id, ...)}\if{html}{\out{</div>}}
@@ -624,6 +629,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetCalculationStatusSummaries"></a>}}
+\if{latex}{\out{\hypertarget{method-GetCalculationStatusSummaries}{}}}
 \subsection{Method \code{GetCalculationStatusSummaries()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CalculationsApi$GetCalculationStatusSummaries(...)}\if{html}{\out{</div>}}
@@ -632,6 +638,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetCalculationStatusSummariesWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-GetCalculationStatusSummariesWithHttpInfo}{}}}
 \subsection{Method \code{GetCalculationStatusSummariesWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CalculationsApi$GetCalculationStatusSummariesWithHttpInfo(...)}\if{html}{\out{</div>}}
@@ -640,6 +647,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-RunCalculation"></a>}}
+\if{latex}{\out{\hypertarget{method-RunCalculation}{}}}
 \subsection{Method \code{RunCalculation()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CalculationsApi$RunCalculation(calculation = NULL, ...)}\if{html}{\out{</div>}}
@@ -648,6 +656,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-RunCalculationWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-RunCalculationWithHttpInfo}{}}}
 \subsection{Method \code{RunCalculationWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CalculationsApi$RunCalculationWithHttpInfo(calculation = NULL, ...)}\if{html}{\out{</div>}}
@@ -656,6 +665,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

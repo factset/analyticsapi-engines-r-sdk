@@ -2,8 +2,6 @@ library(factset.analyticsapi.engines)
 library(factset.protobuf.stach)
 library(httr)
 
-source("stach_extensions.R")
-
 username <- "<username-serial>"
 password <- "<apikey>"
 url <- "https://api.factset.com"
@@ -134,13 +132,11 @@ main <- function (){
 
       package <- read(factset.protobuf.stach.Package, getCalculationUnitResultResponse$content)
 
-      stachExtension <- StachExtension$new()
+      stachExtension <- StachExtensions$new()
 
       # Converting result to data frame
-      tables[[calculationUnitId]] <- stachExtension$convertToDataFrame(package)
-
-      # Dump data frame to .csv files
-      # stachExtension$generateCSV(package)
+      tables[[calculationUnitId]] <- stachExtension$ConvertToDataFrame(package)
+      
       # Printing first 6 records in the first data frame to console
       print(paste("Printing first 6 records in the first data frame"));
       print(head(tables[[1]][[1]]))

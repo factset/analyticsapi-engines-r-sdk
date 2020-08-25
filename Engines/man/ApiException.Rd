@@ -4,7 +4,9 @@
 \name{ApiException}
 \alias{ApiException}
 \title{ApiException}
-\format{An \code{R6Class} generator object}
+\format{
+An \code{R6Class} generator object
+}
 \description{
 ApiException Class
 }
@@ -31,6 +33,7 @@ ApiException Class
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
+\if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ApiException$new(status = NULL, reason = NULL, http_response = NULL)}\if{html}{\out{</div>}}
@@ -39,6 +42,7 @@ ApiException Class
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-toString"></a>}}
+\if{latex}{\out{\hypertarget{method-toString}{}}}
 \subsection{Method \code{toString()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ApiException$toString()}\if{html}{\out{</div>}}
@@ -47,6 +51,7 @@ ApiException Class
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

@@ -4,7 +4,9 @@
 \name{CurrenciesApi}
 \alias{CurrenciesApi}
 \title{Currencies operations}
-\format{An \code{R6Class} generator object}
+\format{
+An \code{R6Class} generator object
+}
 \description{
 factset.analyticsapi.engines.Currencies
 }
@@ -148,6 +150,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
+\if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CurrenciesApi$new(apiClient)}\if{html}{\out{</div>}}
@@ -156,6 +159,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetPACurrencies"></a>}}
+\if{latex}{\out{\hypertarget{method-GetPACurrencies}{}}}
 \subsection{Method \code{GetPACurrencies()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CurrenciesApi$GetPACurrencies(...)}\if{html}{\out{</div>}}
@@ -164,6 +168,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetPACurrenciesWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-GetPACurrenciesWithHttpInfo}{}}}
 \subsection{Method \code{GetPACurrenciesWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CurrenciesApi$GetPACurrenciesWithHttpInfo(...)}\if{html}{\out{</div>}}
@@ -172,6 +177,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

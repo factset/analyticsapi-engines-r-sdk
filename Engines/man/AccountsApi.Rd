@@ -4,7 +4,9 @@
 \name{AccountsApi}
 \alias{AccountsApi}
 \title{Accounts operations}
-\format{An \code{R6Class} generator object}
+\format{
+An \code{R6Class} generator object
+}
 \description{
 factset.analyticsapi.engines.Accounts
 }
@@ -174,6 +176,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
+\if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{AccountsApi$new(apiClient)}\if{html}{\out{</div>}}
@@ -182,6 +185,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetAccounts"></a>}}
+\if{latex}{\out{\hypertarget{method-GetAccounts}{}}}
 \subsection{Method \code{GetAccounts()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{AccountsApi$GetAccounts(path, ...)}\if{html}{\out{</div>}}
@@ -190,6 +194,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetAccountsWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-GetAccountsWithHttpInfo}{}}}
 \subsection{Method \code{GetAccountsWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{AccountsApi$GetAccountsWithHttpInfo(path, ...)}\if{html}{\out{</div>}}
@@ -198,6 +203,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

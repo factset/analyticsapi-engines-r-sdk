@@ -4,7 +4,9 @@
 \name{UtilityApi}
 \alias{UtilityApi}
 \title{Utility operations}
-\format{An \code{R6Class} generator object}
+\format{
+An \code{R6Class} generator object
+}
 \description{
 factset.analyticsapi.engines
 }
@@ -141,6 +143,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
+\if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{UtilityApi$new(apiClient)}\if{html}{\out{</div>}}
@@ -149,6 +152,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetByUrl"></a>}}
+\if{latex}{\out{\hypertarget{method-GetByUrl}{}}}
 \subsection{Method \code{GetByUrl()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{UtilityApi$GetByUrl(url, ...)}\if{html}{\out{</div>}}
@@ -157,6 +161,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetByUrlWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-GetByUrlWithHttpInfo}{}}}
 \subsection{Method \code{GetByUrlWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{UtilityApi$GetByUrlWithHttpInfo(url, ...)}\if{html}{\out{</div>}}
@@ -165,6 +170,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

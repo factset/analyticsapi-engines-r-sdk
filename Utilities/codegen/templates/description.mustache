@@ -1,5 +1,5 @@
-{{! This file is picked from the v4.2.2 release of openapi-generator(https://github.com/OpenAPITools/openapi-generator/blob/v4.2.2/modules/openapi-generator/src/main/resources/r/description.mustache) }}
-{{! Changes made: 1) Fixed a CRAN submission issue. }}
+{{! This file is picked from the v4.3.1 release of openapi-generator(https://github.com/OpenAPITools/openapi-generator/blob/v4.3.1/modules/openapi-generator/src/main/resources/r/description.mustache) }}
+{{! Changes made: 1) Fixed a CRAN submission issue. 2) Added dependency for factset.protobuf.stach. }}
 Package: {{{packageName}}}
 Title: 'FactSet' Engines API Client
 Version: {{packageVersion}}
@@ -19,5 +19,5 @@ Encoding: UTF-8
 License: {{#licenseInfo}}{{licenseInfo}}{{/licenseInfo}}{{^licenseInfo}}Unlicense{{/licenseInfo}}
 LazyData: true
 Suggests: testthat
-Imports: jsonlite, httr, R6, caTools{{#useRlangExceptionHandling}}, rlang{{/useRlangExceptionHandling}}
+Imports: jsonlite, httr, R6, base64enc{{#useRlangExceptionHandling}}, rlang{{/useRlangExceptionHandling}}, factset.protobuf.stach (< 2.0.0)
 RoxygenNote: 6.0.1.9000

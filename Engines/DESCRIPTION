@@ -1,6 +1,6 @@
 Package: factset.analyticsapi.engines
 Title: 'FactSet' Engines API Client
-Version: 3.0.1
+Version: 3.1.0
 Authors@R: c(
     person("Analytics API Support", email = "analytics.api.support@factset.com", role = "aut"),
     person("Akshay Sheth", email = "asheth@factset.com", role = "cre"))
@@ -17,5 +17,5 @@ Encoding: UTF-8
 License: Apache License 2.0
 LazyData: true
 Suggests: testthat
-Imports: jsonlite, httr, R6, caTools, rlang
-RoxygenNote: 6.0.1.9000
+Imports: jsonlite, httr, R6, base64enc, rlang, factset.protobuf.stach (< 2.0.0)
+RoxygenNote: 7.1.0

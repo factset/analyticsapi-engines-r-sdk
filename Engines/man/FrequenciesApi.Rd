@@ -4,7 +4,9 @@
 \name{FrequenciesApi}
 \alias{FrequenciesApi}
 \title{Frequencies operations}
-\format{An \code{R6Class} generator object}
+\format{
+An \code{R6Class} generator object
+}
 \description{
 factset.analyticsapi.engines.Frequencies
 }
@@ -376,6 +378,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
+\if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{FrequenciesApi$new(apiClient)}\if{html}{\out{</div>}}
@@ -384,6 +387,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetPAFrequencies"></a>}}
+\if{latex}{\out{\hypertarget{method-GetPAFrequencies}{}}}
 \subsection{Method \code{GetPAFrequencies()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{FrequenciesApi$GetPAFrequencies(...)}\if{html}{\out{</div>}}
@@ -392,6 +396,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetPAFrequenciesWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-GetPAFrequenciesWithHttpInfo}{}}}
 \subsection{Method \code{GetPAFrequenciesWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{FrequenciesApi$GetPAFrequenciesWithHttpInfo(...)}\if{html}{\out{</div>}}
@@ -400,6 +405,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetSPARFrequencies"></a>}}
+\if{latex}{\out{\hypertarget{method-GetSPARFrequencies}{}}}
 \subsection{Method \code{GetSPARFrequencies()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{FrequenciesApi$GetSPARFrequencies(...)}\if{html}{\out{</div>}}
@@ -408,6 +414,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetSPARFrequenciesWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-GetSPARFrequenciesWithHttpInfo}{}}}
 \subsection{Method \code{GetSPARFrequenciesWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{FrequenciesApi$GetSPARFrequenciesWithHttpInfo(...)}\if{html}{\out{</div>}}
@@ -416,6 +423,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetVaultFrequencies"></a>}}
+\if{latex}{\out{\hypertarget{method-GetVaultFrequencies}{}}}
 \subsection{Method \code{GetVaultFrequencies()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{FrequenciesApi$GetVaultFrequencies(...)}\if{html}{\out{</div>}}
@@ -424,6 +432,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetVaultFrequenciesWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-GetVaultFrequenciesWithHttpInfo}{}}}
 \subsection{Method \code{GetVaultFrequenciesWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{FrequenciesApi$GetVaultFrequenciesWithHttpInfo(...)}\if{html}{\out{</div>}}
@@ -432,6 +441,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

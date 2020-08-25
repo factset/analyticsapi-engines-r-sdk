@@ -4,7 +4,9 @@
 \name{ColumnsApi}
 \alias{ColumnsApi}
 \title{Columns operations}
-\format{An \code{R6Class} generator object}
+\format{
+An \code{R6Class} generator object
+}
 \description{
 factset.analyticsapi.engines.Columns
 }
@@ -258,8 +260,7 @@ api.instance$apiClient$username <- '<user-serial>';
 api.instance$apiClient$password <- '<api_key>';
 
 result <- tryCatch(
-            api.instance$GetPAColumns(name=var.name, category=var.category, 
-                                      directory=var.directory),
+            api.instance$GetPAColumns(name=var.name, category=var.category, directory=var.directory),
             ApiException = function(ex) ex 
          )
 # In case of error, print the error object 
@@ -297,6 +298,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
+\if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ColumnsApi$new(apiClient)}\if{html}{\out{</div>}}
@@ -305,6 +307,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetPAColumnById"></a>}}
+\if{latex}{\out{\hypertarget{method-GetPAColumnById}{}}}
 \subsection{Method \code{GetPAColumnById()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ColumnsApi$GetPAColumnById(id, ...)}\if{html}{\out{</div>}}
@@ -313,6 +316,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetPAColumnByIdWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-GetPAColumnByIdWithHttpInfo}{}}}
 \subsection{Method \code{GetPAColumnByIdWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ColumnsApi$GetPAColumnByIdWithHttpInfo(id, ...)}\if{html}{\out{</div>}}
@@ -321,6 +325,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetPAColumns"></a>}}
+\if{latex}{\out{\hypertarget{method-GetPAColumns}{}}}
 \subsection{Method \code{GetPAColumns()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ColumnsApi$GetPAColumns(name = NULL, category = NULL, directory = NULL, ...)}\if{html}{\out{</div>}}
@@ -329,6 +334,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetPAColumnsWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-GetPAColumnsWithHttpInfo}{}}}
 \subsection{Method \code{GetPAColumnsWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ColumnsApi$GetPAColumnsWithHttpInfo(
@@ -342,6 +348,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{

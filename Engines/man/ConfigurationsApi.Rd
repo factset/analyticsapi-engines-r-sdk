@@ -4,7 +4,9 @@
 \name{ConfigurationsApi}
 \alias{ConfigurationsApi}
 \title{Configurations operations}
-\format{An \code{R6Class} generator object}
+\format{
+An \code{R6Class} generator object
+}
 \description{
 factset.analyticsapi.engines.Configurations
 }
@@ -264,8 +266,7 @@ response.status.code <- result$response$status_code
 ####################  GetVaultConfigurations  ####################
 
 library(factset.analyticsapi.engines)
-var.account <- 'account_example' # character | Required account query parameter to 
-                                 # filter configurations for a specific account
+var.account <- 'account_example' # character | Required account query parameter to filter configurations for a specific account
 
 #Get Vault configurations
 api.instance <- ConfigurationsApi$new()
@@ -315,6 +316,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
+\if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ConfigurationsApi$new(apiClient)}\if{html}{\out{</div>}}
@@ -323,6 +325,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetVaultConfigurationById"></a>}}
+\if{latex}{\out{\hypertarget{method-GetVaultConfigurationById}{}}}
 \subsection{Method \code{GetVaultConfigurationById()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ConfigurationsApi$GetVaultConfigurationById(id, ...)}\if{html}{\out{</div>}}
@@ -331,6 +334,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetVaultConfigurationByIdWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-GetVaultConfigurationByIdWithHttpInfo}{}}}
 \subsection{Method \code{GetVaultConfigurationByIdWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ConfigurationsApi$GetVaultConfigurationByIdWithHttpInfo(id, ...)}\if{html}{\out{</div>}}
@@ -339,6 +343,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetVaultConfigurations"></a>}}
+\if{latex}{\out{\hypertarget{method-GetVaultConfigurations}{}}}
 \subsection{Method \code{GetVaultConfigurations()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ConfigurationsApi$GetVaultConfigurations(account, ...)}\if{html}{\out{</div>}}
@@ -347,6 +352,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-GetVaultConfigurationsWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-GetVaultConfigurationsWithHttpInfo}{}}}
 \subsection{Method \code{GetVaultConfigurationsWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{ConfigurationsApi$GetVaultConfigurationsWithHttpInfo(account, ...)}\if{html}{\out{</div>}}
@@ -355,6 +361,7 @@ response.status.code <- result$response$status_code
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{
