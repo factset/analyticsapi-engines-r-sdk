@@ -260,6 +260,13 @@ print_result<-function (calculationUnitId, pathPrefix){
 
   # Converting result to data frame
   Tables[[calculationUnitId]] <- stachExtension$ConvertToDataFrame(package)
+
+  # Uncomment below line to dump data frame to .csv files
+  # dataFramesList <- Tables[[calculationUnitId]]
+  # for (dataFrameId in names(dataFramesList)) {
+  #   write.table(dataFramesList[[dataFrameId]], file = paste(dataFrameId, ".csv", sep = ""), sep = ",", row.names = FALSE)
+  # }
+
   # Printing first 6 records in the first data frame to console
   print(paste("Printing first 6 records in the first data frame of the calculation"))
   print(head(Tables[[1]][[1]]))
