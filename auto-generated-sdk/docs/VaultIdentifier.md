@@ -1,5 +1,6 @@
 # factset.analyticsapi.engines::VaultIdentifier
 
+The account/benchmark parameter for Vault calculation.
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
