@@ -15,7 +15,7 @@
 #' @section Methods:
 #' \describe{
 #' \strong{ CancelCalculationById } \emph{ Cancel calculation by id }
-#' This is the endpoint to cancel a previously submitted calculation request.  Instead of doing a GET on the getCalculationById URL, cancel the calculation by doing a DELETE.  All individual calculation units within the calculation will be canceled if they have not already finished.
+#' This is the endpoint to cancel a previously submitted calculation request. Instead of doing a GET on the getCalculationById URL, cancel the calculation by doing a DELETE. All individual calculation units within the calculation will be canceled if they have not already finished.
 #'
 #' \itemize{
 #' \item \emph{ @param } id character
@@ -110,7 +110,7 @@
 #' }
 #'
 #' \strong{ GetCalculationStatusById } \emph{ Get calculation status by id }
-#' This is the endpoint to check on the progress of a previous calculation request.  Response body contains status information of the entire request and each individual calculation unit.
+#' This is the endpoint to check on the progress of a previous calculation request. Response body contains status information of the entire request and each individual calculation unit.
 #'
 #' \itemize{
 #' \item \emph{ @param } id character
@@ -310,7 +310,7 @@
 #' }
 #'
 #' \strong{ RunCalculation } \emph{ Run calculation }
-#' This endpoint creates a new calculation and runs the set of calculation units specified in the POST body.  This must be used first before get status or cancelling endpoints with a calculation id.   A successful response will contain the URL to check the status of the calculation request.    Remarks:  * Maximum 500 units allowed across all simultaneous calculations. (Refer API documentation for more information)                * Any settings in POST body will act as a one-time override over the settings saved in the PA/SPAR/Vault template.
+#' This endpoint creates a new calculation and runs the set of calculation units specified in the POST body. This must be used first before get status or cancelling endpoints with a calculation id.  A successful response will contain the URL to check the status of the calculation request.  Remarks: * Maximum 500 units allowed across all simultaneous calculations. (Refer API documentation for more information)              * Any settings in POST body will act as a one-time override over the settings saved in the PA/SPAR/Vault template.
 #'
 #' \itemize{
 #' \item \emph{ @param } calculation \link{Calculation}

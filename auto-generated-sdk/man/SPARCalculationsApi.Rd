@@ -99,7 +99,7 @@ X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request
 }
 
 \strong{ GetSPARCalculationById } \emph{ Get SPAR calculation by id }
-This is the endpoint to check on the progress of a previously requested calculation.  If the calculation has finished computing, the body of the response will contain the requested document in JSON.
+This is the endpoint to check on the progress of a previously requested calculation. If the calculation has finished computing, the body of the response will contain the requested document in JSON.
 
 \itemize{
 \item \emph{ @param } id character
@@ -228,7 +228,7 @@ X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request
 }
 
 \strong{ RunSPARCalculation } \emph{ Run SPAR Calculation }
-This endpoint runs the SPAR calculation specified in the POST body parameters.  It must be used first before polling or cancelling endpoints.   A successful response will contain the URL to poll for the result of the calculation.    Remarks:    * Any settings in POST body will act as a one-time override over the settings saved in the SPAR template.
+This endpoint runs the SPAR calculation specified in the POST body parameters. It must be used first before polling or cancelling endpoints.  A successful response will contain the URL to poll for the result of the calculation.  Remarks:  * Any settings in POST body will act as a one-time override over the settings saved in the SPAR template.
 
 \itemize{
 \item \emph{ @param } spar.calculation.parameters \link{SPARCalculationParameters}
