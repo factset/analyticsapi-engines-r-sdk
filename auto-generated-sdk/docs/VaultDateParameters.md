@@ -1,5 +1,6 @@
 # factset.analyticsapi.engines::VaultDateParameters
 
+The date parameters for Vault calculation
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
