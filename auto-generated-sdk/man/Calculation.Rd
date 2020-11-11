@@ -18,6 +18,8 @@ Calculation Class
 \item{\code{spar}}{named list( \link{SPARCalculationParameters} ) [optional]}
 
 \item{\code{vault}}{named list( \link{VaultCalculationParameters} ) [optional]}
+
+\item{\code{pub}}{named list( \link{PubCalculationParameters} ) [optional]}
 }
 \if{html}{\out{</div>}}
 }
@@ -37,7 +39,7 @@ Calculation Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{Calculation$new(pa = NULL, spar = NULL, vault = NULL, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{Calculation$new(pa = NULL, spar = NULL, vault = NULL, pub = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }

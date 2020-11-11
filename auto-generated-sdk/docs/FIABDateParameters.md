@@ -1,0 +1,10 @@
+# factset.analyticsapi.engines::FIABDateParameters
+
+The date parameters for FIAB calculations.
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**startdate** | **character** | Calculation&#39;s start date. | 
+**enddate** | **character** | Calculation&#39;s end date. | 
+
+

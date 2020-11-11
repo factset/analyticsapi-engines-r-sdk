@@ -28,11 +28,11 @@ This endpoint looks up all PA3 documents and sub-directories in a given director
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
 }
 \item status code : 400 | Invalid query parameter or value provided
 
@@ -40,11 +40,11 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
 }
 \item status code : 401 | Missing or invalid authentication
 
@@ -52,11 +52,8 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
 }
 \item status code : 403 | User is forbidden with current credentials
 
@@ -64,11 +61,11 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
 }
 \item status code : 404 | Path not found
 
@@ -76,11 +73,11 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
 }
 \item status code : 406 | Unsupported Accept header.  Header needs to be set to application/json
 
@@ -88,11 +85,21 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
+}
+\item status code : 429 | Rate limit reached. Wait till the time specified in Retry-After header value to make further requests.
+
+
+\item response headers :
+
+\tabular{ll}{
+X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+Retry-After \tab Time to wait in seconds before making a new request as the rate limit has reached. \cr
 }
 \item status code : 500 | Server error. Log the X-DataDirect-Request-Key header to assist in troubleshooting
 
@@ -100,11 +107,8 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
 }
 \item status code : 503 | Request timed out. Retry the request in some time
 
@@ -112,11 +116,116 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+}
+}
+
+\strong{ GetPubDocuments } \emph{ Gets Publisher documents and sub-directories in a directory }
+This endpoint looks up all Publisher documents and sub-directories in a given directory.
+
+\itemize{
+\item \emph{ @param } path character
+\item \emph{ @returnType } \link{DocumentDirectories} \cr
+
+\item On encountering errors, an error of subclass ApiException will be thrown.
+
+\item status code : 200 | Expected response, returns a list of Publisher documents and directories
+
+\item return type : DocumentDirectories 
+\item response headers :
+
+\tabular{ll}{
+X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
+}
+\item status code : 400 | Invalid query parameter or value provided
+
+
+\item response headers :
+
+\tabular{ll}{
+X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
+}
+\item status code : 401 | Missing or invalid authentication
+
+
+\item response headers :
+
+\tabular{ll}{
+X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+}
+\item status code : 403 | User is forbidden with current credentials
+
+
+\item response headers :
+
+\tabular{ll}{
+X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
+}
+\item status code : 404 | Path not found
+
+
+\item response headers :
+
+\tabular{ll}{
+X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
+}
+\item status code : 406 | Unsupported Accept header.  Header needs to be set to application/json
+
+
+\item response headers :
+
+\tabular{ll}{
+X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
+}
+\item status code : 429 | Rate limit reached. Wait till the time specified in Retry-After header value to make further requests.
+
+
+\item response headers :
+
+\tabular{ll}{
+X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+Retry-After \tab Time to wait in seconds before making a new request as the rate limit has reached. \cr
+}
+\item status code : 500 | Server error. Log the X-DataDirect-Request-Key header to assist in troubleshooting
+
+
+\item response headers :
+
+\tabular{ll}{
+X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+}
+\item status code : 503 | Request timed out. Retry the request in some time
+
+
+\item response headers :
+
+\tabular{ll}{
+X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
 }
 }
 
@@ -135,11 +244,11 @@ This endpoint looks up all SPAR3 documents and sub-directories in a given direct
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
 }
 \item status code : 400 | Invalid query parameter or value provided
 
@@ -147,11 +256,11 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
 }
 \item status code : 401 | Missing or invalid authentication
 
@@ -159,11 +268,8 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
 }
 \item status code : 403 | User is forbidden with current credentials
 
@@ -171,11 +277,11 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
 }
 \item status code : 404 | Path not found
 
@@ -183,11 +289,11 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
 }
 \item status code : 406 | Unsupported Accept header.  Header needs to be set to application/json
 
@@ -195,11 +301,21 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
+}
+\item status code : 429 | Rate limit reached. Wait till the time specified in Retry-After header value to make further requests.
+
+
+\item response headers :
+
+\tabular{ll}{
+X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+Retry-After \tab Time to wait in seconds before making a new request as the rate limit has reached. \cr
 }
 \item status code : 500 | Server error. Log the X-DataDirect-Request-Key header to assist in troubleshooting
 
@@ -207,11 +323,8 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
 }
 \item status code : 503 | Request timed out. Retry the request in some time
 
@@ -219,11 +332,8 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
 }
 }
 
@@ -242,11 +352,11 @@ This endpoint looks up all Vault documents and sub-directories in a given direct
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
 }
 \item status code : 400 | Invalid query parameter or value provided
 
@@ -254,11 +364,11 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
 }
 \item status code : 401 | Missing or invalid authentication
 
@@ -266,11 +376,8 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
 }
 \item status code : 403 | User is forbidden with current credentials
 
@@ -278,11 +385,11 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
 }
 \item status code : 404 | Path not found
 
@@ -290,11 +397,11 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
 }
 \item status code : 406 | Unsupported Accept header.  Header needs to be set to application/json
 
@@ -302,11 +409,21 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
+}
+\item status code : 429 | Rate limit reached. Wait till the time specified in Retry-After header value to make further requests.
+
+
+\item response headers :
+
+\tabular{ll}{
+X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+Retry-After \tab Time to wait in seconds before making a new request as the rate limit has reached. \cr
 }
 \item status code : 500 | Server error. Log the X-DataDirect-Request-Key header to assist in troubleshooting
 
@@ -314,11 +431,8 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
 }
 \item status code : 503 | Request timed out. Retry the request in some time
 
@@ -326,11 +440,8 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
 }
 }
 
@@ -342,7 +453,7 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 ####################  GetPA3Documents  ####################
 
 library(factset.analyticsapi.engines)
-var.path <- 'path_example' # character | The directory to get the documents and sub-directories in
+var.path <- '' # character | The directory to get the documents and sub-directories in
 
 #Get PA3 documents and sub-directories in a directory
 api.instance <- DocumentsApi$new()
@@ -370,10 +481,41 @@ response.status.code <- result$response$status_code
 }
 
 
+####################  GetPubDocuments  ####################
+
+library(factset.analyticsapi.engines)
+var.path <- '' # character | The directory to get the documents in
+
+#Gets Publisher documents and sub-directories in a directory
+api.instance <- DocumentsApi$new()
+
+#Configure HTTP basic authorization: Basic
+# provide your username in the user-serial format
+api.instance$apiClient$username <- '<user-serial>'; 
+# provide your api key generated using the developer portal
+api.instance$apiClient$password <- '<api_key>';
+
+result <- tryCatch(
+            api.instance$GetPubDocuments(var.path),
+            ApiException = function(ex) ex 
+         )
+# In case of error, print the error object 
+if(!is.null(result$ApiException)) {
+  cat(result$ApiException$toString())
+} else {
+# deserialized response object
+response.object <- result$content
+# response headers
+response.headers <- result$response$headers
+# response status code
+response.status.code <- result$response$status_code
+}
+
+
 ####################  GetSPAR3Documents  ####################
 
 library(factset.analyticsapi.engines)
-var.path <- 'path_example' # character | The directory to get the documents in
+var.path <- '' # character | The directory to get the documents in
 
 #Gets SPAR3 documents and sub-directories in a directory
 api.instance <- DocumentsApi$new()
@@ -404,7 +546,7 @@ response.status.code <- result$response$status_code
 ####################  GetVaultDocuments  ####################
 
 library(factset.analyticsapi.engines)
-var.path <- 'path_example' # character | The directory to get the documents in
+var.path <- '' # character | The directory to get the documents in
 
 #Get Vault documents and sub-directories in a directory
 api.instance <- DocumentsApi$new()
@@ -447,6 +589,8 @@ response.status.code <- result$response$status_code
 \item \href{#method-new}{\code{DocumentsApi$new()}}
 \item \href{#method-GetPA3Documents}{\code{DocumentsApi$GetPA3Documents()}}
 \item \href{#method-GetPA3DocumentsWithHttpInfo}{\code{DocumentsApi$GetPA3DocumentsWithHttpInfo()}}
+\item \href{#method-GetPubDocuments}{\code{DocumentsApi$GetPubDocuments()}}
+\item \href{#method-GetPubDocumentsWithHttpInfo}{\code{DocumentsApi$GetPubDocumentsWithHttpInfo()}}
 \item \href{#method-GetSPAR3Documents}{\code{DocumentsApi$GetSPAR3Documents()}}
 \item \href{#method-GetSPAR3DocumentsWithHttpInfo}{\code{DocumentsApi$GetSPAR3DocumentsWithHttpInfo()}}
 \item \href{#method-GetVaultDocuments}{\code{DocumentsApi$GetVaultDocuments()}}
@@ -478,6 +622,24 @@ response.status.code <- result$response$status_code
 \subsection{Method \code{GetPA3DocumentsWithHttpInfo()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{DocumentsApi$GetPA3DocumentsWithHttpInfo(path, ...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-GetPubDocuments"></a>}}
+\if{latex}{\out{\hypertarget{method-GetPubDocuments}{}}}
+\subsection{Method \code{GetPubDocuments()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{DocumentsApi$GetPubDocuments(path, ...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-GetPubDocumentsWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-GetPubDocumentsWithHttpInfo}{}}}
+\subsection{Method \code{GetPubDocumentsWithHttpInfo()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{DocumentsApi$GetPubDocumentsWithHttpInfo(path, ...)}\if{html}{\out{</div>}}
 }
 
 }
