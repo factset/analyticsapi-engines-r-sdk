@@ -1,6 +1,6 @@
 Package: factset.analyticsapi.engines
 Title: 'FactSet' Engines API Client
-Version: 3.1.0
+Version: 3.2.0
 Authors@R: c(
     person("Analytics API Support", email = "analytics.api.support@factset.com", role = "aut"),
     person("Akshay Sheth", email = "asheth@factset.com", role = "cre"))
