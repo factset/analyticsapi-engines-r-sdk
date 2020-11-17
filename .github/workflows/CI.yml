@@ -29,7 +29,7 @@ jobs:
         sudo Rscript -e "devtools::install_local('factset.analyticsapi.engines_*.tar.gz')"
 
     - name: Run tests
-      run: Rscript Utilities/tests/testthat.R
+      run: Rscript tests/testthat.R
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
