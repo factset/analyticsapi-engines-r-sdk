@@ -1,10 +1,8 @@
-name: CI
+name: Release
 
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  release:
+    types: [ published ]
 
 jobs:
   build:
@@ -21,12 +19,6 @@ jobs:
     - name: Build new SDK
       run: R CMD build auto-generated-sdk
     
-    - name: Install new SDK
-      run: Rscript -e "devtools::install_local('factset.analyticsapi.engines_*.tar.gz')"
-
-    - name: Run tests
-      run: Rscript Utilities/tests/testthat.R
-
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
       with:
