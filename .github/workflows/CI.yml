@@ -22,7 +22,9 @@ jobs:
       run: R CMD build auto-generated-sdk
     
     - name: Install new SDK
-      run: Rscript -e "devtools::install_local('factset.analyticsapi.engines_*.tar.gz')"
+      run: |
+        sudo Rscript -e "install.packages('devtools', repos = 'http://cran.us.r-project.org')"
+        sudo Rscript -e "devtools::install_local('factset.analyticsapi.engines_*.tar.gz')"
 
     - name: Run tests
       run: Rscript Utilities/tests/testthat.R
