@@ -1,4 +1,4 @@
 library(testthat)
 library(factset.analyticsapi.engines)
 
-testthat::test_dir("Utilities/tests/testthat", reporter = "progress")
+testthat::test_dir("tests/testthat", reporter = "progress")
