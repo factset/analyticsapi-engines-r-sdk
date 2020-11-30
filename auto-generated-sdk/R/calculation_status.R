@@ -1,6 +1,6 @@
 # Engines API
 #
-# Allow clients to fetch Engines Analytics through APIs.
+# Allow clients to fetch Analytics through APIs.
 #
 # The version of the OpenAPI document: 2
 # Contact: analytics.api.support@factset.com
@@ -12,13 +12,15 @@
 #' @format An \code{R6Class} generator object
 #' @field status  character [optional]
 #'
-#' @field points  integer [optional]
+#' @field units  integer [optional]
 #'
 #' @field pa  named list( \link{CalculationUnitStatus} ) [optional]
 #'
 #' @field spar  named list( \link{CalculationUnitStatus} ) [optional]
 #'
 #' @field vault  named list( \link{CalculationUnitStatus} ) [optional]
+#'
+#' @field pub  named list( \link{CalculationUnitStatus} ) [optional]
 #'
 #'
 #' @importFrom R6 R6Class
@@ -28,19 +30,20 @@ CalculationStatus <- R6::R6Class(
   'CalculationStatus',
   public = list(
     `status` = NULL,
-    `points` = NULL,
+    `units` = NULL,
     `pa` = NULL,
     `spar` = NULL,
     `vault` = NULL,
-    initialize = function(`status`=NULL, `points`=NULL, `pa`=NULL, `spar`=NULL, `vault`=NULL, ...){
+    `pub` = NULL,
+    initialize = function(`status`=NULL, `units`=NULL, `pa`=NULL, `spar`=NULL, `vault`=NULL, `pub`=NULL, ...){
       local.optional.var <- list(...)
       if (!is.null(`status`)) {
         stopifnot(is.character(`status`), length(`status`) == 1)
         self$`status` <- `status`
       }
-      if (!is.null(`points`)) {
-        stopifnot(is.numeric(`points`), length(`points`) == 1)
-        self$`points` <- `points`
+      if (!is.null(`units`)) {
+        stopifnot(is.numeric(`units`), length(`units`) == 1)
+        self$`units` <- `units`
       }
       if (!is.null(`pa`)) {
         stopifnot(is.vector(`pa`), length(`pa`) != 0)
@@ -57,6 +60,11 @@ CalculationStatus <- R6::R6Class(
         sapply(`vault`, function(x) stopifnot(R6::is.R6(x)))
         self$`vault` <- `vault`
       }
+      if (!is.null(`pub`)) {
+        stopifnot(is.vector(`pub`), length(`pub`) != 0)
+        sapply(`pub`, function(x) stopifnot(R6::is.R6(x)))
+        self$`pub` <- `pub`
+      }
     },
     toJSON = function() {
       CalculationStatusObject <- list()
@@ -64,9 +72,9 @@ CalculationStatus <- R6::R6Class(
         CalculationStatusObject[['status']] <-
           self$`status`
       }
-      if (!is.null(self$`points`)) {
-        CalculationStatusObject[['points']] <-
-          self$`points`
+      if (!is.null(self$`units`)) {
+        CalculationStatusObject[['units']] <-
+          self$`units`
       }
       if (!is.null(self$`pa`)) {
         CalculationStatusObject[['pa']] <-
@@ -80,6 +88,10 @@ CalculationStatus <- R6::R6Class(
         CalculationStatusObject[['vault']] <-
           lapply(self$`vault`, function(x) x$toJSON())
       }
+      if (!is.null(self$`pub`)) {
+        CalculationStatusObject[['pub']] <-
+          lapply(self$`pub`, function(x) x$toJSON())
+      }
 
       CalculationStatusObject
     },
@@ -88,8 +100,8 @@ CalculationStatus <- R6::R6Class(
       if (!is.null(CalculationStatusObject$`status`)) {
         self$`status` <- CalculationStatusObject$`status`
       }
-      if (!is.null(CalculationStatusObject$`points`)) {
-        self$`points` <- CalculationStatusObject$`points`
+      if (!is.null(CalculationStatusObject$`units`)) {
+        self$`units` <- CalculationStatusObject$`units`
       }
       if (!is.null(CalculationStatusObject$`pa`)) {
         self$`pa` <- ApiClient$new()$deserializeObj(CalculationStatusObject$`pa`, "map(CalculationUnitStatus)", loadNamespace("factset.analyticsapi.engines"))
@@ -99,6 +111,9 @@ CalculationStatus <- R6::R6Class(
       }
       if (!is.null(CalculationStatusObject$`vault`)) {
         self$`vault` <- ApiClient$new()$deserializeObj(CalculationStatusObject$`vault`, "map(CalculationUnitStatus)", loadNamespace("factset.analyticsapi.engines"))
+      }
+      if (!is.null(CalculationStatusObject$`pub`)) {
+        self$`pub` <- ApiClient$new()$deserializeObj(CalculationStatusObject$`pub`, "map(CalculationUnitStatus)", loadNamespace("factset.analyticsapi.engines"))
       }
     },
     toJSONString = function() {
@@ -110,12 +125,12 @@ CalculationStatus <- R6::R6Class(
                 ',
         self$`status`
         )},
-        if (!is.null(self$`points`)) {
+        if (!is.null(self$`units`)) {
         sprintf(
-        '"points":
+        '"units":
           %d
                 ',
-        self$`points`
+        self$`units`
         )},
         if (!is.null(self$`pa`)) {
         sprintf(
@@ -137,6 +152,13 @@ CalculationStatus <- R6::R6Class(
         %s
 ',
         jsonlite::toJSON(lapply(self$`vault`, function(x){ x$toJSON() }), auto_unbox = TRUE, digits=NA)
+        )},
+        if (!is.null(self$`pub`)) {
+        sprintf(
+        '"pub":
+        %s
+',
+        jsonlite::toJSON(lapply(self$`pub`, function(x){ x$toJSON() }), auto_unbox = TRUE, digits=NA)
         )}
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
@@ -145,10 +167,11 @@ CalculationStatus <- R6::R6Class(
     fromJSONString = function(CalculationStatusJson) {
       CalculationStatusObject <- jsonlite::fromJSON(CalculationStatusJson)
       self$`status` <- CalculationStatusObject$`status`
-      self$`points` <- CalculationStatusObject$`points`
+      self$`units` <- CalculationStatusObject$`units`
       self$`pa` <- ApiClient$new()$deserializeObj(CalculationStatusObject$`pa`, "map(CalculationUnitStatus)", loadNamespace("factset.analyticsapi.engines"))
       self$`spar` <- ApiClient$new()$deserializeObj(CalculationStatusObject$`spar`, "map(CalculationUnitStatus)", loadNamespace("factset.analyticsapi.engines"))
       self$`vault` <- ApiClient$new()$deserializeObj(CalculationStatusObject$`vault`, "map(CalculationUnitStatus)", loadNamespace("factset.analyticsapi.engines"))
+      self$`pub` <- ApiClient$new()$deserializeObj(CalculationStatusObject$`pub`, "map(CalculationUnitStatus)", loadNamespace("factset.analyticsapi.engines"))
       self
     }
   )

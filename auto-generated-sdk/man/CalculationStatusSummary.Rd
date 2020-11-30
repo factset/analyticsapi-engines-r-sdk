@@ -15,7 +15,7 @@ CalculationStatusSummary Class
 \describe{
 \item{\code{status}}{character [optional]}
 
-\item{\code{points}}{integer [optional]}
+\item{\code{units}}{integer [optional]}
 
 \item{\code{requestTime}}{character [optional]}
 
@@ -41,7 +41,7 @@ CalculationStatusSummary Class
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CalculationStatusSummary$new(
   status = NULL,
-  points = NULL,
+  units = NULL,
   requestTime = NULL,
   lastPollTime = NULL,
   ...
