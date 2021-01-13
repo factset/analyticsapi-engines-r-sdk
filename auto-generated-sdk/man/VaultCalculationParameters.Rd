@@ -20,6 +20,8 @@ VaultCalculationParameters Class
 \item{\code{dates}}{\link{VaultDateParameters} [optional]}
 
 \item{\code{configid}}{character}
+
+\item{\code{componentdetail}}{character [optional]}
 }
 \if{html}{\out{</div>}}
 }
@@ -44,6 +46,7 @@ VaultCalculationParameters Class
   account,
   configid,
   dates = NULL,
+  componentdetail = NULL,
   ...
 )}\if{html}{\out{</div>}}
 }

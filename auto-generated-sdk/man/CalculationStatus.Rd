@@ -15,13 +15,15 @@ CalculationStatus Class
 \describe{
 \item{\code{status}}{character [optional]}
 
-\item{\code{points}}{integer [optional]}
+\item{\code{units}}{integer [optional]}
 
 \item{\code{pa}}{named list( \link{CalculationUnitStatus} ) [optional]}
 
 \item{\code{spar}}{named list( \link{CalculationUnitStatus} ) [optional]}
 
 \item{\code{vault}}{named list( \link{CalculationUnitStatus} ) [optional]}
+
+\item{\code{pub}}{named list( \link{CalculationUnitStatus} ) [optional]}
 }
 \if{html}{\out{</div>}}
 }
@@ -43,10 +45,11 @@ CalculationStatus Class
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CalculationStatus$new(
   status = NULL,
-  points = NULL,
+  units = NULL,
   pa = NULL,
   spar = NULL,
   vault = NULL,
+  pub = NULL,
   ...
 )}\if{html}{\out{</div>}}
 }
