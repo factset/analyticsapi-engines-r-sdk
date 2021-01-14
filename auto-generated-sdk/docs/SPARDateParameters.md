@@ -1,5 +1,6 @@
 # factset.analyticsapi.engines::SPARDateParameters
 
+The date parameters for SPAR calculation.
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

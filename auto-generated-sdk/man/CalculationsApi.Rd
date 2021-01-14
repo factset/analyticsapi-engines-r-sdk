@@ -27,11 +27,11 @@ This is the endpoint to cancel a previously submitted calculation request.  Inst
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
 }
 \item status code : 400 | Invalid identifier provided.
 
@@ -39,11 +39,11 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
 }
 \item status code : 401 | Missing or invalid authentication.
 
@@ -51,11 +51,8 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
 }
 \item status code : 403 | User is forbidden with current credentials.
 
@@ -63,11 +60,11 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
 }
 \item status code : 404 | There was no request for the identifier provided, or the request was already canceled for the provided identifier.
 
@@ -75,11 +72,21 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
+}
+\item status code : 429 | Rate limit reached. Wait till the time specified in Retry-After header value to make further requests.
+
+
+\item response headers :
+
+\tabular{ll}{
+X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+Retry-After \tab Time to wait in seconds before making a new request as the rate limit has reached. \cr
 }
 \item status code : 500 | Server error. Log the X-DataDirect-Request-Key header to assist in troubleshooting.
 
@@ -87,11 +94,8 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
 }
 \item status code : 503 | Request timed out. Retry the request in sometime.
 
@@ -99,11 +103,8 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
 }
 }
 
@@ -122,12 +123,12 @@ This is the endpoint to check on the progress of a previous calculation request.
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
 Cache-Control \tab Standard HTTP header. Header will specify max-age in seconds. Polling can be adjusted based on the max-age value. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
 }
 \item status code : 400 | Invalid identifier provided.
 
@@ -135,12 +136,12 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
 Cache-Control \tab Standard HTTP header. Header will specify max-age in seconds. Polling can be adjusted based on the max-age value. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
 }
 \item status code : 401 | Missing or invalid authentication.
 
@@ -148,12 +149,9 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
 Cache-Control \tab Standard HTTP header. Header will specify max-age in seconds. Polling can be adjusted based on the max-age value. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
 }
 \item status code : 403 | User is forbidden with current credentials.
 
@@ -161,12 +159,12 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
 Cache-Control \tab Standard HTTP header. Header will specify max-age in seconds. Polling can be adjusted based on the max-age value. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
 }
 \item status code : 404 | Provided identifier was not a request, or the request was cancelled.
 
@@ -174,12 +172,12 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
 Cache-Control \tab Standard HTTP header. Header will specify max-age in seconds. Polling can be adjusted based on the max-age value. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
 }
 \item status code : 406 | Unsupported Accept header. Header needs to be set to application/json.
 
@@ -187,12 +185,23 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
 Cache-Control \tab Standard HTTP header. Header will specify max-age in seconds. Polling can be adjusted based on the max-age value. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
+}
+\item status code : 429 | Rate limit reached. Wait till the time specified in Retry-After header value to make further requests.
+
+
+\item response headers :
+
+\tabular{ll}{
+Cache-Control \tab Standard HTTP header. Header will specify max-age in seconds. Polling can be adjusted based on the max-age value. \cr
+X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+Retry-After \tab Time to wait in seconds before making a new request as the rate limit has reached. \cr
 }
 \item status code : 500 | Server error. Log the X-DataDirect-Request-Key header to assist in troubleshooting.
 
@@ -200,12 +209,9 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
 Cache-Control \tab Standard HTTP header. Header will specify max-age in seconds. Polling can be adjusted based on the max-age value. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
 }
 \item status code : 503 | Request timed out. Retry the request in sometime.
 
@@ -213,12 +219,9 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
 Cache-Control \tab Standard HTTP header. Header will specify max-age in seconds. Polling can be adjusted based on the max-age value. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
 }
 }
 
@@ -236,11 +239,11 @@ This endpoints returns all active calculation requests.
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
 }
 \item status code : 401 | Missing or invalid authentication.
 
@@ -248,11 +251,8 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
 }
 \item status code : 403 | User is forbidden with current credentials.
 
@@ -260,11 +260,11 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
 }
 \item status code : 406 | Unsupported Accept header. Header needs to be set to application/json.
 
@@ -272,11 +272,21 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
+}
+\item status code : 429 | Rate limit reached. Wait till the time specified in Retry-After header value to make further requests.
+
+
+\item response headers :
+
+\tabular{ll}{
+X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+Retry-After \tab Time to wait in seconds before making a new request as the rate limit has reached. \cr
 }
 \item status code : 500 | Server error. Log the X-DataDirect-Request-Key header to assist in troubleshooting.
 
@@ -284,11 +294,8 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
 }
 \item status code : 503 | Request timed out. Retry the request in sometime.
 
@@ -296,18 +303,17 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
 }
 }
 
 \strong{ RunCalculation } \emph{ Run calculation }
-This endpoint creates a new calculation and runs the set of calculation units specified in the POST body.  This must be used first before get status or cancelling endpoints with a calculation id.   A successful response will contain the URL to check the status of the calculation request.    Remarks:  * Maximum 25 points allowed per calculation and maximum 500 points allowed across all simultaneous calculations. (Refer API documentation for more information)                * Any settings in POST body will act as a one-time override over the settings saved in the PA/SPAR/Vault template.
+This endpoint creates a new calculation and runs the set of calculation units specified in the POST body.  This must be used first before get status or cancelling endpoints with a calculation id.   A successful response will contain the URL to check the status of the calculation request.    Remarks:  * Maximum 500 units allowed across all simultaneous calculations. (Refer API documentation for more information)                * Any settings in POST body will act as a one-time override over the settings saved in the PA/SPAR/Vault template.
 
 \itemize{
+\item \emph{ @param } x.factset.content.organization character
+\item \emph{ @param } x.factset.content.type character
 \item \emph{ @param } calculation \link{Calculation}
 
 \item On encountering errors, an error of subclass ApiException will be thrown.
@@ -318,14 +324,16 @@ This endpoint creates a new calculation and runs the set of calculation units sp
 \item response headers :
 
 \tabular{ll}{
-X-FactSet-Api-Points-Limit \tab Maximum points limit across all batches. \cr
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-FactSet-Api-Points-Remaining \tab Number of points remaining till points limit reached. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 Location \tab URL to check status of the request. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-FactSet-Api-Points-Limit \tab Maximum points limit across all batches. \cr
+X-FactSet-Api-Points-Remaining \tab Number of points remaining till points limit reached. \cr
+X-FactSet-Api-Units-Limit \tab Maximum units limit across all batches. \cr
+X-FactSet-Api-Units-Remaining \tab Number of units remaining till units limit reached. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
 }
 \item status code : 400 | Invalid POST body.
 
@@ -333,14 +341,15 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-FactSet-Api-Points-Limit \tab Maximum points limit across all batches. \cr
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-FactSet-Api-Points-Remaining \tab Number of points remaining till points limit reached. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
-Location \tab URL to check status of the request. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-FactSet-Api-Points-Limit \tab Maximum points limit across all batches. \cr
+X-FactSet-Api-Points-Remaining \tab Number of points remaining till points limit reached. \cr
+X-FactSet-Api-Units-Limit \tab Maximum units limit across all batches. \cr
+X-FactSet-Api-Units-Remaining \tab Number of units remaining till units limit reached. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
 }
 \item status code : 401 | Missing or invalid authentication.
 
@@ -348,14 +357,12 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-FactSet-Api-Points-Limit \tab Maximum points limit across all batches. \cr
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-FactSet-Api-Points-Remaining \tab Number of points remaining till points limit reached. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
-Location \tab URL to check status of the request. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-FactSet-Api-Points-Limit \tab Maximum points limit across all batches. \cr
+X-FactSet-Api-Points-Remaining \tab Number of points remaining till points limit reached. \cr
+X-FactSet-Api-Units-Limit \tab Maximum units limit across all batches. \cr
+X-FactSet-Api-Units-Remaining \tab Number of units remaining till units limit reached. \cr
 }
 \item status code : 403 | User is forbidden with current credentials.
 
@@ -363,14 +370,15 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-FactSet-Api-Points-Limit \tab Maximum points limit across all batches. \cr
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-FactSet-Api-Points-Remaining \tab Number of points remaining till points limit reached. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
-Location \tab URL to check status of the request. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-FactSet-Api-Points-Limit \tab Maximum points limit across all batches. \cr
+X-FactSet-Api-Points-Remaining \tab Number of points remaining till points limit reached. \cr
+X-FactSet-Api-Units-Limit \tab Maximum units limit across all batches. \cr
+X-FactSet-Api-Units-Remaining \tab Number of units remaining till units limit reached. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
 }
 \item status code : 415 | Missing/Invalid Content-Type header. Header needs to be set to application/json.
 
@@ -378,14 +386,15 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-FactSet-Api-Points-Limit \tab Maximum points limit across all batches. \cr
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-FactSet-Api-Points-Remaining \tab Number of points remaining till points limit reached. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
-Location \tab URL to check status of the request. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-FactSet-Api-Points-Limit \tab Maximum points limit across all batches. \cr
+X-FactSet-Api-Points-Remaining \tab Number of points remaining till points limit reached. \cr
+X-FactSet-Api-Units-Limit \tab Maximum units limit across all batches. \cr
+X-FactSet-Api-Units-Remaining \tab Number of units remaining till units limit reached. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
 }
 \item status code : 429 | Rate limit reached. Cancel older requests using Cancel Calculation endpoint or wait for older requests to finish / expire.
 
@@ -393,14 +402,16 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-FactSet-Api-Points-Limit \tab Maximum points limit across all batches. \cr
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-FactSet-Api-Points-Remaining \tab Number of points remaining till points limit reached. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
-Location \tab URL to check status of the request. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-FactSet-Api-Points-Limit \tab Maximum points limit across all batches. \cr
+X-FactSet-Api-Points-Remaining \tab Number of points remaining till points limit reached. \cr
+X-FactSet-Api-Units-Limit \tab Maximum units limit across all batches. \cr
+X-FactSet-Api-Units-Remaining \tab Number of units remaining till units limit reached. \cr
+X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
+Retry-After \tab Time to wait in seconds before making a new request as the rate limit has reached. \cr
 }
 \item status code : 500 | Server error. Log the X-DataDirect-Request-Key header to assist in troubleshooting.
 
@@ -408,14 +419,12 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-FactSet-Api-Points-Limit \tab Maximum points limit across all batches. \cr
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-FactSet-Api-Points-Remaining \tab Number of points remaining till points limit reached. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
-Location \tab URL to check status of the request. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-FactSet-Api-Points-Limit \tab Maximum points limit across all batches. \cr
+X-FactSet-Api-Points-Remaining \tab Number of points remaining till points limit reached. \cr
+X-FactSet-Api-Units-Limit \tab Maximum units limit across all batches. \cr
+X-FactSet-Api-Units-Remaining \tab Number of units remaining till units limit reached. \cr
 }
 \item status code : 503 | Request timed out. Retry the request in sometime.
 
@@ -423,14 +432,12 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-FactSet-Api-Points-Limit \tab Maximum points limit across all batches. \cr
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-FactSet-Api-Points-Remaining \tab Number of points remaining till points limit reached. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
-Location \tab URL to check status of the request. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-FactSet-Api-Points-Limit \tab Maximum points limit across all batches. \cr
+X-FactSet-Api-Points-Remaining \tab Number of points remaining till points limit reached. \cr
+X-FactSet-Api-Units-Limit \tab Maximum units limit across all batches. \cr
+X-FactSet-Api-Units-Remaining \tab Number of units remaining till units limit reached. \cr
 }
 }
 
@@ -532,6 +539,8 @@ response.status.code <- result$response$status_code
 ####################  RunCalculation  ####################
 
 library(factset.analyticsapi.engines)
+var.x.factset.content.organization <- 'x.factset.content.organization_example' # character | For specifying the format of the calculation result. Accepted values are \"column\" or \"row\" or \"simplifiedrow\"
+var.x.factset.content.type <- 'x.factset.content.type_example' # character | For specifying the content type of the calculation result. Accepted values are either \"application/json\" or \"application/x-protobuf\"
 var.calculation <- Calculation$new() # Calculation | 
 
 #Run calculation
@@ -544,7 +553,7 @@ api.instance$apiClient$username <- '<user-serial>';
 api.instance$apiClient$password <- '<api_key>';
 
 result <- tryCatch(
-            api.instance$RunCalculation(calculation=var.calculation),
+            api.instance$RunCalculation(x.factset.content.organization=var.x.factset.content.organization, x.factset.content.type=var.x.factset.content.type, calculation=var.calculation),
             ApiException = function(ex) ex 
          )
 # In case of error, print the error object 
@@ -650,7 +659,12 @@ response.status.code <- result$response$status_code
 \if{latex}{\out{\hypertarget{method-RunCalculation}{}}}
 \subsection{Method \code{RunCalculation()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{CalculationsApi$RunCalculation(calculation = NULL, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{CalculationsApi$RunCalculation(
+  x.factset.content.organization = NULL,
+  x.factset.content.type = NULL,
+  calculation = NULL,
+  ...
+)}\if{html}{\out{</div>}}
 }
 
 }
@@ -659,7 +673,12 @@ response.status.code <- result$response$status_code
 \if{latex}{\out{\hypertarget{method-RunCalculationWithHttpInfo}{}}}
 \subsection{Method \code{RunCalculationWithHttpInfo()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{CalculationsApi$RunCalculationWithHttpInfo(calculation = NULL, ...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{CalculationsApi$RunCalculationWithHttpInfo(
+  x.factset.content.organization = NULL,
+  x.factset.content.type = NULL,
+  calculation = NULL,
+  ...
+)}\if{html}{\out{</div>}}
 }
 
 }

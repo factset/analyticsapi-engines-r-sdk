@@ -15,11 +15,11 @@ CalculationUnitStatus Class
 \describe{
 \item{\code{status}}{character [optional]}
 
-\item{\code{points}}{integer [optional]}
-
 \item{\code{error}}{character [optional]}
 
 \item{\code{result}}{character [optional]}
+
+\item{\code{progress}}{character [optional]}
 }
 \if{html}{\out{</div>}}
 }
@@ -41,9 +41,9 @@ CalculationUnitStatus Class
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{CalculationUnitStatus$new(
   status = NULL,
-  points = NULL,
   error = NULL,
   result = NULL,
+  progress = NULL,
   ...
 )}\if{html}{\out{</div>}}
 }
