@@ -26,6 +26,8 @@ PACalculationParameters Class
 \item{\code{currencyisocode}}{character [optional]}
 
 \item{\code{columns}}{list( \link{PACalculationColumn} ) [optional]}
+
+\item{\code{componentdetail}}{character [optional]}
 }
 \if{html}{\out{</div>}}
 }
@@ -53,6 +55,7 @@ PACalculationParameters Class
   groups = NULL,
   currencyisocode = NULL,
   columns = NULL,
+  componentdetail = NULL,
   ...
 )}\if{html}{\out{</div>}}
 }
