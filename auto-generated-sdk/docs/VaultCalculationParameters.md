@@ -7,5 +7,6 @@ Name | Type | Description | Notes
 **account** | [**VaultIdentifier**](VaultIdentifier.md) |  | 
 **dates** | [**VaultDateParameters**](VaultDateParameters.md) |  | [optional] 
 **configid** | **character** | Vault Configuration identifier. | 
+**componentdetail** | **character** | Component detail type for the Vault component. It can be GROUPS or TOTALS. | [optional] 
 
 
