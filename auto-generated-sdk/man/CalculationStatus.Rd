@@ -13,15 +13,11 @@ CalculationStatus Class
 \section{Public fields}{
 \if{html}{\out{<div class="r6-fields">}}
 \describe{
+\item{\code{calculationid}}{character [optional]}
+
 \item{\code{status}}{character [optional]}
 
-\item{\code{points}}{integer [optional]}
-
-\item{\code{pa}}{named list( \link{CalculationUnitStatus} ) [optional]}
-
-\item{\code{spar}}{named list( \link{CalculationUnitStatus} ) [optional]}
-
-\item{\code{vault}}{named list( \link{CalculationUnitStatus} ) [optional]}
+\item{\code{units}}{named list( \link{CalculationUnitStatus} ) [optional]}
 }
 \if{html}{\out{</div>}}
 }
@@ -41,14 +37,7 @@ CalculationStatus Class
 \if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{CalculationStatus$new(
-  status = NULL,
-  points = NULL,
-  pa = NULL,
-  spar = NULL,
-  vault = NULL,
-  ...
-)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{CalculationStatus$new(calculationid = NULL, status = NULL, units = NULL, ...)}\if{html}{\out{</div>}}
 }
 
 }

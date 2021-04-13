@@ -3,10 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**calculationid** | **character** |  | [optional] 
 **status** | **character** |  | [optional] 
-**points** | **integer** |  | [optional] 
-**pa** | [**map(CalculationUnitStatus)**](CalculationUnitStatus.md) |  | [optional] 
-**spar** | [**map(CalculationUnitStatus)**](CalculationUnitStatus.md) |  | [optional] 
-**vault** | [**map(CalculationUnitStatus)**](CalculationUnitStatus.md) |  | [optional] 
+**units** | [**map(CalculationUnitStatus)**](CalculationUnitStatus.md) | Number of calculation units in batch. | [optional] 
 
 

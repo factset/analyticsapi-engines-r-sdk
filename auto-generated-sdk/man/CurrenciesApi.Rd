@@ -13,25 +13,25 @@ factset.analyticsapi.engines.Currencies
 \section{Methods}{
 
 \describe{
-\strong{ GetPACurrencies } \emph{ Get PA currencies }
-This endpoint lists all the PA currencies that can be applied to a calculation.
+\strong{ GetCurrencies } \emph{ Get currencies }
+This endpoint lists all the currencies that can be applied to any calculation.
 
 \itemize{
-\item \emph{ @returnType } named list( \link{Currency} ) \cr
+\item \emph{ @returnType } \link{CurrencyRoot} \cr
 
 \item On encountering errors, an error of subclass ApiException will be thrown.
 
-\item status code : 200 | Expected response, returns a list of PA currencies.
+\item status code : 200 | Expected response, returns a list of currencies.
 
-\item return type : map(Currency) 
+\item return type : CurrencyRoot 
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-FactSet-Api-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-FactSet-Api-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-FactSet-Api-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
 }
 \item status code : 401 | Missing or invalid authentication.
 
@@ -39,11 +39,8 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
 }
 \item status code : 403 | User is forbidden with current credentials
 
@@ -51,11 +48,11 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-FactSet-Api-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-FactSet-Api-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-FactSet-Api-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
 }
 \item status code : 406 | Unsupported Accept header. Header needs to be set to application/json.
 
@@ -63,11 +60,21 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+X-FactSet-Api-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
+X-FactSet-Api-RateLimit-Remaining \tab Number of requests left for the time window. \cr
+X-FactSet-Api-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
+}
+\item status code : 429 | Rate limit reached. Wait till the time specified in Retry-After header value to make further requests.
+
+
+\item response headers :
+
+\tabular{ll}{
+X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
+Retry-After \tab Time to wait in seconds before making a new request as the rate limit has reached. \cr
 }
 \item status code : 500 | Server error. Log the X-DataDirect-Request-Key header to assist in troubleshooting.
 
@@ -75,11 +82,8 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
 }
 \item status code : 503 | Request timed out. Retry the request in sometime.
 
@@ -87,11 +91,8 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 \item response headers :
 
 \tabular{ll}{
-X-RateLimit-Remaining \tab Number of requests left for the time window. \cr
-X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
-X-RateLimit-Reset \tab Number of seconds remaining till rate limit resets. \cr
-X-RateLimit-Limit \tab Number of allowed requests for the time window. \cr
 X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
+X-FactSet-Api-Request-Key \tab Key to uniquely identify an Analytics API request. Only available after successful authentication. \cr
 }
 }
 
@@ -100,11 +101,11 @@ X-DataDirect-Request-Key \tab FactSet&#39;s request key header. \cr
 
 \examples{
 \dontrun{
-####################  GetPACurrencies  ####################
+####################  GetCurrencies  ####################
 
 library(factset.analyticsapi.engines)
 
-#Get PA currencies
+#Get currencies
 api.instance <- CurrenciesApi$new()
 
 #Configure HTTP basic authorization: Basic
@@ -114,7 +115,7 @@ api.instance$apiClient$username <- '<user-serial>';
 api.instance$apiClient$password <- '<api_key>';
 
 result <- tryCatch(
-            api.instance$GetPACurrencies(),
+            api.instance$GetCurrencies(),
             ApiException = function(ex) ex 
          )
 # In case of error, print the error object 
@@ -143,8 +144,8 @@ response.status.code <- result$response$status_code
 \subsection{Public methods}{
 \itemize{
 \item \href{#method-new}{\code{CurrenciesApi$new()}}
-\item \href{#method-GetPACurrencies}{\code{CurrenciesApi$GetPACurrencies()}}
-\item \href{#method-GetPACurrenciesWithHttpInfo}{\code{CurrenciesApi$GetPACurrenciesWithHttpInfo()}}
+\item \href{#method-GetCurrencies}{\code{CurrenciesApi$GetCurrencies()}}
+\item \href{#method-GetCurrenciesWithHttpInfo}{\code{CurrenciesApi$GetCurrenciesWithHttpInfo()}}
 \item \href{#method-clone}{\code{CurrenciesApi$clone()}}
 }
 }
@@ -158,20 +159,20 @@ response.status.code <- result$response$status_code
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-GetPACurrencies"></a>}}
-\if{latex}{\out{\hypertarget{method-GetPACurrencies}{}}}
-\subsection{Method \code{GetPACurrencies()}}{
+\if{html}{\out{<a id="method-GetCurrencies"></a>}}
+\if{latex}{\out{\hypertarget{method-GetCurrencies}{}}}
+\subsection{Method \code{GetCurrencies()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{CurrenciesApi$GetPACurrencies(...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{CurrenciesApi$GetCurrencies(...)}\if{html}{\out{</div>}}
 }
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-GetPACurrenciesWithHttpInfo"></a>}}
-\if{latex}{\out{\hypertarget{method-GetPACurrenciesWithHttpInfo}{}}}
-\subsection{Method \code{GetPACurrenciesWithHttpInfo()}}{
+\if{html}{\out{<a id="method-GetCurrenciesWithHttpInfo"></a>}}
+\if{latex}{\out{\hypertarget{method-GetCurrenciesWithHttpInfo}{}}}
+\subsection{Method \code{GetCurrenciesWithHttpInfo()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{CurrenciesApi$GetPACurrenciesWithHttpInfo(...)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{CurrenciesApi$GetCurrenciesWithHttpInfo(...)}\if{html}{\out{</div>}}
 }
 
 }
