@@ -1,10 +1,6 @@
 <img alt="FactSet" src="https://www.factset.com/hubfs/Assets/images/factset-logo.svg" height="56" width="290">
 
-# Analytics API Engines R SDK
-
-[![cran](https://img.shields.io/cran/v/factset.analyticsapi.engines)](https://cran.r-project.org/web/packages/factset.analyticsapi.engines)
-![API version](https://img.shields.io/badge/API-v3-blue)
-[![Apache-2 license](https://img.shields.io/badge/license-Apache2-brightgreen.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+# Analytics API V3 R Programming Code Snippets
 
 Use this examples to work with FactSet's Analytics APIs. Below APIs can be found in this Repository.
 
@@ -40,5 +36,5 @@ Refer [examples](examples) project for sample code snippets to quickly get start
 Sys.setenv("ANALYTICS_API_URL" = "https://api.factset.com")
 Sys.setenv("ANALYTICS_API_USERNAME_SERIAL" = "<username-serial>")
 Sys.setenv("ANALYTICS_API_PASSWORD" = "<apikey>")
-Sys.setenv("CLIENT_PROXY_URL" = "<proxyurl>")
+Sys.setenv("CLIENT_PROXY_URL" = "<proxyurl>")PROXY_URL
 ```
