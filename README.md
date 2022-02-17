@@ -2,7 +2,7 @@
 
 # Analytics API V3 R Programming Code Snippets
 
-Use this examples to work with FactSet's Analytics APIs. Below APIs can be found in this Repository.
+To integrate with FactSet's Analytics APIs. Code snippets are available for below APIs
 
 * [PA Engine API](https://developer.factset.com/api-catalog/pa-engine-api)
 
@@ -36,5 +36,5 @@ Refer [examples](examples) project for sample code snippets to quickly get start
 Sys.setenv("ANALYTICS_API_URL" = "https://api.factset.com")
 Sys.setenv("ANALYTICS_API_USERNAME_SERIAL" = "<username-serial>")
 Sys.setenv("ANALYTICS_API_PASSWORD" = "<apikey>")
-Sys.setenv("CLIENT_PROXY_URL" = "<proxyurl>")PROXY_URL
+Sys.setenv("CLIENT_PROXY_URL" = "<proxyurl>")
 ```
