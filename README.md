@@ -28,8 +28,6 @@ Refer [examples](examples) project for sample code snippets to quickly get start
 
 ## Prerequisite
 
-```
-
 * Set the environment variables as below. Use the [Developer Portal Manage API Keys page](https://developer.factset.com/manage-api-keys) to get these values.
 
 ```r
