@@ -17,7 +17,7 @@ Use this examples to work with FactSet's Analytics APIs. Below APIs can be found
 
   ```sh
   
-   Rscript -e "install.packages('factset.protobuf.stach.V2', repos = 'http://cran.us.r-project.org')"
+   Rscript -e "install.packages('factset.protobuf.stach.v2', repos = 'http://cran.us.r-project.org')"
    Rscript -e "install.packages('factset.protobuf.stachextensions', repos = 'http://cran.us.r-project.org')"
   ```
 
