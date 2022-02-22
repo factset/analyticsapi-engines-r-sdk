@@ -38,4 +38,4 @@ Sys.setenv("ANALYTICS_API_PASSWORD" = "<apikey>")
 
 ## Contributing
 
-* Projects [examples](examples) are open to enhancements.
+* Projects [examples](examples) are open to enhancements and bug fixes. Please create a pull requests with the proposed changes.
