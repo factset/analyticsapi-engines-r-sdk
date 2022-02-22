@@ -34,5 +34,9 @@ Refer [examples](examples) project for sample code snippets to quickly get start
 Sys.setenv("ANALYTICS_API_URL" = "https://api.factset.com")
 Sys.setenv("ANALYTICS_API_USERNAME_SERIAL" = "<username-serial>")
 Sys.setenv("ANALYTICS_API_PASSWORD" = "<apikey>")
-Sys.setenv("CLIENT_PROXY_URL" = "<proxyurl>")
 ```
+
+## Contributing
+
+* Files in [auto-generated-sdk](auto-generated-sdk) directory are auto-generated and should not be manually edited here. Refer [Analytics API Engines SDK Generator](https://github.com/factset/analyticsapi-engines-sdk-generator) for instructions on how to modify these files.
+* Projects [examples](examples) and [tests](tests) are open to enhancements and bug fixes. Please create a pull requests with the proposed changes.

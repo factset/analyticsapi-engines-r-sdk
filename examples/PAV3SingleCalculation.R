@@ -7,8 +7,8 @@ library(stringr)
 host <- Sys.getenv("FACTSET_HOST")
 username <- Sys.getenv("FACTSET_USERNAME")
 password <- Sys.getenv("FACTSET_API_KEY")
-#proxyUrl <-
-#Sys.getenv("CLIENT_PROXY_URL") # To Set Up Proxy Configuration
+# To Set Up Proxy Configuration
+#proxyUrl <- #Sys.getenv("CLIENT_PROXY_URL")
 
 # This is a helper function used to construct PA Identifier list
 GetPAIdentifier <- function(Id, holdingsMode)
@@ -59,10 +59,10 @@ GetApiResponse <- function(methodType,
       authenticate(username, password),
       add_headers(Accept = "application/json"),
       content_type("application/json"),
-      pause_min = 2,
       # pause for 'two' seconds of time
-      times = maxCalls,
+      pause_min = 2,
       # Maximum number of requests to attempt
+      times = maxCalls,
       terminate_on = terminateonStatusCodes
     ),
     "POST" = apiResponse <- RETRY(
@@ -72,9 +72,10 @@ GetApiResponse <- function(methodType,
       authenticate(username, password),
       add_headers("Accept" = "application/json", customHeaders),
       content_type("application/json"),
+      # pause for 'two' seconds of time
       pause_min = 2,
-      times = maxCalls,
       # Maximum number of requests to attempt
+      times = maxCalls,
       body =  requestBody,
       terminate_on = terminateonStatusCodes
     )
