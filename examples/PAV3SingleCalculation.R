@@ -35,11 +35,10 @@ paDates <- list(frequency = "Single",
                 startdate = "0",
                 enddate =  "0")
 
-genericApiStatusCodes <- c(100:599) # Vector of all Api Status Codes
-retryStatusCodes <-
-  c(429, 503) # Configuration to retry api calls on http status codes of 429 and 503.
-terminateonStatusCodes <-
-  setdiff(genericApiStatusCodes, retryStatusCodes) # Returns all the status codes except 429,503
+# building list of status codes to be ignored for retry.
+# only the 429 and 503 status codes will be retried.
+statusCodesRange <- c(100, 599)
+terminateonStatusCodes <- setdiff(statusCodesRange, c(429, 503))
 
 maxCalls <- 3 # Maximum number of times to retry api requests
 
@@ -61,6 +60,7 @@ GetApiResponse <- function(methodType,
       add_headers(Accept = "application/json"),
       content_type("application/json"),
       pause_min = 2,
+      # pause for 'two' seconds of time
       times = maxCalls,
       # Maximum number of requests to attempt
       terminate_on = terminateonStatusCodes
