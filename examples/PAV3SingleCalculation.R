@@ -22,6 +22,10 @@ GetPAIdentifier <- function(Id, holdingsMode)
 paDocument <- "PA_DOCUMENTS:DEFAULT"
 paComponentName <- "Weights"
 paComponentCategory <- "Weights / Exposures"
+pricingSourceName <- "MSCI - Gross"
+pricingSourceCategory <- "MSCI"
+pricingSourceDirectory <- "Equity"
+
 
 paAccounts1 <- GetPAIdentifier("BENCH:SP50", "OMS")
 #paAccounts2 <- GetPAIdentifier("BENCH:SP50", "OMS")
@@ -34,6 +38,27 @@ paBenchmarks <- rbind(paBenchmarks1)
 paDates <- list(frequency = "Single",
                 startdate = "0",
                 enddate =  "0")
+
+GetPAPortfolioPricingSources <- function(paPricingSourceId)
+{
+  Id = c(paPricingSourceId) # PricingSourceId
+  paPortfolioPricingSources <- data.frame(Id)
+  return(paPortfolioPricingSources)
+}
+
+GetPACalculationsDataSources <- function(paPricingSourceId)
+{
+  paPortfolioPricingSources1 <-
+    GetPAPortfolioPricingSources(paPricingSourceId)
+  paPortfolioPricingSources <- rbind(paPortfolioPricingSources1)
+  
+  paDataSources <-
+    list(
+      portfoliopricingsources = paPortfolioPricingSources,
+      useportfoliopricingsourcesforbenchmark = "true"
+    )
+  return(paDataSources)
+}
 
 # building list of status codes to be ignored for retry.
 # only the 429 and 503 status codes will be retried.
@@ -48,7 +73,8 @@ GetApiResponse <- function(methodType,
                            username,
                            password,
                            requestBody = NULL,
-                           customHeaders = NULL)
+                           customHeaders = NULL,
+                           query = NULL)
 {
   switch(
     methodType,
@@ -63,7 +89,8 @@ GetApiResponse <- function(methodType,
       pause_min = 2,
       # Maximum number of requests to attempt
       times = maxCalls,
-      terminate_on = terminateonStatusCodes
+      terminate_on = terminateonStatusCodes,
+      query = query
     ),
     "POST" = apiResponse <- RETRY(
       "POST",
@@ -175,30 +202,39 @@ PrintDataFrameResult <- function(dataFrameResult) {
 }
 
 # This is a helper function used to construct request body
-CreateCalculationRequestBody <- function(paComponentId) {
-  # PAComponentId
-  paCalculation  <- list(componentid = paComponentId)
-  
-  # PAAccounts
-  paCalculation  <-
-    append(paCalculation, list(accounts = paAccounts))
-  
-  # PABenchmarks
-  paCalculation  <-
-    append(paCalculation, list(benchmarks = paBenchmarks))
-  
-  # DateParameters
-  paCalculation  <- append(paCalculation, list(dates = paDates))
-  
-  # currency override
-  paCalculation  <-
-    append(paCalculation, list(currencyisocode = "USD"))
-  
-  requestBodyparam <-
-    list("data" = list("1" = paCalculation))
-  
-  return(requestBodyparam)
-}
+CreateCalculationRequestBody <-
+  function(paComponentId, paPricingSourceId) {
+    # PAComponentId
+    paCalculation  <- list(componentid = paComponentId)
+    
+    # PAAccounts
+    paCalculation  <-
+      append(paCalculation, list(accounts = paAccounts))
+    
+    # PABenchmarks
+    paCalculation  <-
+      append(paCalculation, list(benchmarks = paBenchmarks))
+    
+    # DateParameters
+    paCalculation  <- append(paCalculation, list(dates = paDates))
+    
+    # currency override
+    paCalculation  <-
+      append(paCalculation, list(currencyisocode = "USD"))
+    
+    if (!is.null(paPricingSourceId)) {
+      # DataSources
+      paDataSources <-
+        GetPACalculationsDataSources(paPricingSourceId)
+      paCalculation  <-
+        append(paCalculation, list(datasources = paDataSources))
+    }
+    
+    requestBodyparam <-
+      list("data" = list("1" = paCalculation))
+    
+    return(requestBodyparam)
+  }
 
 
 main <- function() {
@@ -206,11 +242,11 @@ main <- function() {
   
   componentsLookupUrl <-
     paste0(host,
-           "/analytics/engines/pa/v3/components?document=",
-           paDocument)
-  
+           "/analytics/engines/pa/v3/components")
+  paramlst <- list(document = paDocument)
   componentsResponse <-
-    GetApiResponse("GET", componentsLookupUrl, username, password)
+    GetApiResponse("GET", componentsLookupUrl, username, password, query =
+                     paramlst)
   
   componentResponseObj <-
     jsonlite::fromJSON(httr::content(componentsResponse, "text", encoding = "UTF-8"))
@@ -240,12 +276,57 @@ main <- function() {
     stop("Invalid Component Id Error")
   }
   
+  # Get PA pricing sources with PricingSourceName, PricingSourceCategory & PricingSourceDirectory
+  
+  pricingSourcesLookupUrl <-
+    paste0(host,
+           "/analytics/engines/pa/v3/pricing-sources")
+  paramlst <-
+    list(name = pricingSourceName,
+         category = pricingSourceCategory,
+         directory = pricingSourceDirectory)
+  pricingSourcesResponse <-
+    GetApiResponse("GET", pricingSourcesLookupUrl, username, password, query =
+                     paramlst)
+  
+  pricingSourcesResponseObj <-
+    jsonlite::fromJSON(httr::content(pricingSourcesResponse, "text", encoding = "UTF-8"))
+  pricingSourcesResponseData <- pricingSourcesResponseObj$data
+  
+  lstnames <- names(pricingSourcesResponseData)
+  for (i in 1:length(pricingSourcesResponseData)) {
+    name <- pricingSourcesResponseData[[i]]$name
+    category <- pricingSourcesResponseData[[i]]$category
+    directory <- pricingSourcesResponseData[[i]]$directory
+    if (tolower(name) == tolower(pricingSourceName) &&
+        tolower(category) == tolower(pricingSourceCategory) &&
+        tolower(directory) == tolower(pricingSourceDirectory))
+    {
+      paPricingSourceId <- lstnames[i]
+      break
+    }
+  }
+  
+  if (is.null(paPricingSourceId))
+  {
+    print(
+      paste(
+        "Pricing Source Id not found for Pricing Source Name:",
+        pricingSourceName,
+        "and Pricing Source Category:",
+        pricingSourceCategory,
+        "and Pricing Source Directory:",
+        pricingSourceDirectory
+      )
+    )
+  }
   
   # Process to get PA V3 Calculations
   
   calculationUrl <-
     paste0(host, "/analytics/engines/pa/v3/calculations")
-  requestBodyparam <- CreateCalculationRequestBody(paComponentId)
+  requestBodyparam <-
+    CreateCalculationRequestBody(paComponentId, paPricingSourceId)
   calcRequestParameters <-
     jsonlite::toJSON(requestBodyparam, auto_unbox = T)
   print("Post Body")
