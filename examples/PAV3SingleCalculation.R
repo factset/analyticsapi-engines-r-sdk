@@ -26,7 +26,6 @@ pricingSourceName <- "MSCI - Gross"
 pricingSourceCategory <- "MSCI"
 pricingSourceDirectory <- "Equity"
 
-
 paAccounts1 <- GetPAIdentifier("BENCH:SP50", "OMS")
 #paAccounts2 <- GetPAIdentifier("BENCH:SP50", "OMS")
 paAccounts <-
@@ -74,7 +73,7 @@ GetApiResponse <- function(methodType,
                            password,
                            requestBody = NULL,
                            customHeaders = NULL,
-                           query = NULL)
+                           queryParams = NULL)
 {
   switch(
     methodType,
@@ -90,7 +89,7 @@ GetApiResponse <- function(methodType,
       # Maximum number of requests to attempt
       times = maxCalls,
       terminate_on = terminateonStatusCodes,
-      query = query
+      query = queryParams
     ),
     "POST" = apiResponse <- RETRY(
       "POST",
@@ -245,7 +244,7 @@ main <- function() {
            "/analytics/engines/pa/v3/components")
   paramlst <- list(document = paDocument)
   componentsResponse <-
-    GetApiResponse("GET", componentsLookupUrl, username, password, query =
+    GetApiResponse("GET", componentsLookupUrl, username, password, queryParams =
                      paramlst)
   
   componentResponseObj <-
@@ -286,7 +285,7 @@ main <- function() {
          category = pricingSourceCategory,
          directory = pricingSourceDirectory)
   pricingSourcesResponse <-
-    GetApiResponse("GET", pricingSourcesLookupUrl, username, password, query =
+    GetApiResponse("GET", pricingSourcesLookupUrl, username, password, queryParams =
                      paramlst)
   
   pricingSourcesResponseObj <-
