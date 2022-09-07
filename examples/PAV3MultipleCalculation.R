@@ -244,22 +244,22 @@ main <- function() {
     paste0(host,
            "/analytics/engines/pa/v3/components?document=",
            paDocument)
-  paramlst <- list(document = paDocument)
+  queryParams <- list(document = paDocument)
   componentsResponse <-
     GetApiResponse("GET", componentsLookupUrl, username, password, queryParams =
-                     paramlst)
+                     queryParams)
   
   componentResponseObj <-
     jsonlite::fromJSON(httr::content(componentsResponse, "text", encoding = "UTF-8"))
   componentResponseData <- componentResponseObj$data
-  lstnames <- names(componentResponseData)
+  componentNames <- names(componentResponseData)
   for (i in 1:length(componentResponseData)) {
     name <- componentResponseData[[i]]$name
     category <- componentResponseData[[i]]$category
     if (tolower(name) == tolower(paComponentName) &&
         tolower(category) == tolower(paComponentCategory))
     {
-      paComponentId <- lstnames[i]
+      paComponentId <- componentNames[i]
       break
     }
   }
@@ -282,7 +282,7 @@ main <- function() {
   pricingSourcesLookupUrl <-
     paste0(host,
            "/analytics/engines/pa/v3/pricing-sources")
-  paramlst <-
+  queryParams <-
     list(name = pricingSourceName,
          category = pricingSourceCategory,
          directory = pricingSourceDirectory)
@@ -292,13 +292,13 @@ main <- function() {
                    username,
                    password,
                    queryParams =
-                     paramlst)
+                     queryParams)
   
   pricingSourcesResponseObj <-
     jsonlite::fromJSON(httr::content(pricingSourcesResponse, "text", encoding = "UTF-8"))
   pricingSourcesResponseData <- pricingSourcesResponseObj$data
   
-  lstnames <- names(pricingSourcesResponseData)
+  pricingSourceNames <- names(pricingSourcesResponseData)
   for (i in 1:length(pricingSourcesResponseData)) {
     name <- pricingSourcesResponseData[[i]]$name
     category <- pricingSourcesResponseData[[i]]$category
@@ -307,7 +307,7 @@ main <- function() {
         tolower(category) == tolower(pricingSourceCategory) &&
         tolower(directory) == tolower(pricingSourceDirectory))
     {
-      paPricingSourceId <- lstnames[i]
+      paPricingSourceId <- pricingSourceNames[i]
       break
     }
   }
